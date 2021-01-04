@@ -7,19 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41BFC8F259A711400D9D26C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC8E259A711400D9D26C /* DataController.swift */; };
+		C41BFC95259A80BB00D9D26C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41BFC94259A80BB00D9D26C /* CloudKit.framework */; };
+		C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC97259A82EE00D9D26C /* HomeView.swift */; };
+		C41BFCA5259BC1DA00D9D26C /* ProfilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFCA4259BC1DA00D9D26C /* ProfilesView.swift */; };
 		C44ACC7C258E968000759BBB /* BrewBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */; };
 		C44ACC7E258E968000759BBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ACC7D258E968000759BBB /* ContentView.swift */; };
 		C44ACC80258E968200759BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44ACC7F258E968200759BBB /* Assets.xcassets */; };
 		C44ACC83258E968200759BBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44ACC82258E968200759BBB /* Preview Assets.xcassets */; };
+		C44ACC8D258E9E7700759BBB /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C44ACC8B258E9E7700759BBB /* Main.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C41BFC8E259A711400D9D26C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrewBuddy.entitlements; sourceTree = "<group>"; };
+		C41BFC94259A80BB00D9D26C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C41BFC97259A82EE00D9D26C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C41BFCA4259BC1DA00D9D26C /* ProfilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesView.swift; sourceTree = "<group>"; };
 		C44ACC78258E968000759BBB /* BrewBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewBuddyApp.swift; sourceTree = "<group>"; };
 		C44ACC7D258E968000759BBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C44ACC7F258E968200759BBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C44ACC82258E968200759BBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C44ACC84258E968200759BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C44ACC8C258E9E7700759BBB /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +38,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C41BFC95259A80BB00D9D26C /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C41BFC93259A80BB00D9D26C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C41BFC94259A80BB00D9D26C /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C41BFC9E259A83C100D9D26C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C41BFC97259A82EE00D9D26C /* HomeView.swift */,
+				C41BFCA4259BC1DA00D9D26C /* ProfilesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C44ACC6F258E968000759BBB = {
 			isa = PBXGroup;
 			children = (
 				C44ACC7A258E968000759BBB /* BrewBuddy */,
 				C44ACC79258E968000759BBB /* Products */,
+				C41BFC93259A80BB00D9D26C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,11 +82,15 @@
 		C44ACC7A258E968000759BBB /* BrewBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				C41BFC9E259A83C100D9D26C /* Views */,
+				C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */,
 				C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */,
 				C44ACC7D258E968000759BBB /* ContentView.swift */,
+				C44ACC8B258E9E7700759BBB /* Main.xcdatamodeld */,
 				C44ACC7F258E968200759BBB /* Assets.xcassets */,
 				C44ACC84258E968200759BBB /* Info.plist */,
 				C44ACC81258E968200759BBB /* Preview Content */,
+				C41BFC8E259A711400D9D26C /* DataController.swift */,
 			);
 			path = BrewBuddy;
 			sourceTree = "<group>";
@@ -138,7 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C44ACC8D258E9E7700759BBB /* Main.xcdatamodeld in Sources */,
+				C41BFC8F259A711400D9D26C /* DataController.swift in Sources */,
 				C44ACC7E258E968000759BBB /* ContentView.swift in Sources */,
+				C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */,
+				C41BFCA5259BC1DA00D9D26C /* ProfilesView.swift in Sources */,
 				C44ACC7C258E968000759BBB /* BrewBuddyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BrewBuddy/BrewBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BrewBuddy/Preview Content\"";
 				DEVELOPMENT_TEAM = QF8DE633U6;
@@ -289,6 +328,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BrewBuddy/BrewBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BrewBuddy/Preview Content\"";
 				DEVELOPMENT_TEAM = QF8DE633U6;
@@ -328,6 +368,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C44ACC8B258E9E7700759BBB /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C44ACC8C258E9E7700759BBB /* Main.xcdatamodel */,
+			);
+			currentVersion = C44ACC8C258E9E7700759BBB /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C44ACC70258E968000759BBB /* Project object */;
 }
