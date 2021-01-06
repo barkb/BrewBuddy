@@ -12,15 +12,15 @@ struct ProfileHeaderView: View {
     
     var body: some View {
         HStack{
-            VStack(alignment: .leading){
-                Text(profile.profileTitle)
-            }
-            Spacer()
+            Text(profile.profileTitle)
+                .accentColor(Color(profile.projectColor))
             NavigationLink(destination: EmptyView()) {
                 Image(systemName: "square.and.pencil")
                     .imageScale(.large)
+                    .accentColor(Color(profile.projectColor))
             }
         }
+        .padding(.bottom, 10)
     }
 }
 
