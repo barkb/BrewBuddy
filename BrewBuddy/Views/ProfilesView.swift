@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProfilesView: View {
+    static let openTag: String? = "Open"
+    static let closedTag: String? = "Closed"
     let showActiveProfiles: Bool
     let profiles: FetchRequest<Profile>
     
@@ -20,9 +22,9 @@ struct ProfilesView: View {
         NavigationView{
             List {
                 ForEach(profiles.wrappedValue) { profile in
-                    Section(header: Text(profile.title ?? "")){
-                        ForEach(profile.beers?.allObjects as? [Beer] ?? []) { beer in
-                            Text(beer.name ?? "")
+                    Section(header: Text(profile.profileTitle)){
+                        ForEach(profile.allBeers) { beer in
+                            BeerRowView(beer: beer)
                         }
                     }
                 }
