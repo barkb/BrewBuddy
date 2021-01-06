@@ -22,7 +22,7 @@ struct ProfilesView: View {
         NavigationView{
             List {
                 ForEach(profiles.wrappedValue) { profile in
-                    Section(header: Text(profile.profileTitle)){
+                    Section(header: ProfileHeaderView(profile: profile)){
                         ForEach(profile.allBeers) { beer in
                             BeerRowView(beer: beer)
                         }

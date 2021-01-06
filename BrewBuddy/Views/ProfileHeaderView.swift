@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct ProfileHeaderView: View {
+    @ObservedObject var profile: Profile
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            VStack(alignment: .leading){
+                Text(profile.profileTitle)
+            }
+            Spacer()
+            NavigationLink(destination: EmptyView()) {
+                Image(systemName: "square.and.pencil")
+                    .imageScale(.large)
+            }
+        }
     }
 }
 
 struct ProfileHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileHeaderView()
+        ProfileHeaderView(profile: Profile.example)
     }
 }
