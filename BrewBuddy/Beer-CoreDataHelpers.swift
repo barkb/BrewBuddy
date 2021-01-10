@@ -8,8 +8,12 @@
 import Foundation
 
 extension Beer {
+    enum SortOrder {
+        case optimized, creationDate, name, brewery
+    }
+    
     var beerName: String {
-        name ?? ""
+        name ?? "New Beer"
     }
     
     var beerDetail: String {

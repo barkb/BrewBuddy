@@ -13,11 +13,12 @@ struct ProfileHeaderView: View {
     var body: some View {
         HStack{
             Text(profile.profileTitle)
-                .accentColor(Color(profile.projectColor))
-            NavigationLink(destination: EmptyView()) {
+                .foregroundColor(Color(profile.profileColor))
+            Spacer()
+            NavigationLink(destination: EditProfileView(profile: profile)) {
                 Image(systemName: "square.and.pencil")
                     .imageScale(.large)
-                    .accentColor(Color(profile.projectColor))
+                    .foregroundColor(Color(profile.profileColor))
             }
         }
         .padding(.bottom, 10)

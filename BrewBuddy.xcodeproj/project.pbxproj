@@ -11,6 +11,7 @@
 		C41BFC95259A80BB00D9D26C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41BFC94259A80BB00D9D26C /* CloudKit.framework */; };
 		C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC97259A82EE00D9D26C /* HomeView.swift */; };
 		C41BFCA5259BC1DA00D9D26C /* ProfilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFCA4259BC1DA00D9D26C /* ProfilesView.swift */; };
+		C43A7A8C25ABC474001218C3 /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A7A8B25ABC474001218C3 /* Sequence-Sorting.swift */; };
 		C43D44A825A3B55100E8F75A /* Beer-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44A725A3B55100E8F75A /* Beer-CoreDataHelpers.swift */; };
 		C43D44AB25A3B71400E8F75A /* Profile-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44AA25A3B71400E8F75A /* Profile-CoreDataHelpers.swift */; };
 		C43D44B225A56AD200E8F75A /* EditBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44B125A56AD200E8F75A /* EditBeerView.swift */; };
@@ -19,6 +20,7 @@
 		C43D44BB25A676C000E8F75A /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44BA25A676C000E8F75A /* Binding-OnChange.swift */; };
 		C43D44BE25A67FEB00E8F75A /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44BD25A67FEB00E8F75A /* ProfileHeaderView.swift */; };
 		C43D44C125A683F600E8F75A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43D44C025A683F600E8F75A /* Colors.xcassets */; };
+		C43D44C425A6AD3C00E8F75A /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44C325A6AD3C00E8F75A /* EditProfileView.swift */; };
 		C44ACC7C258E968000759BBB /* BrewBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */; };
 		C44ACC7E258E968000759BBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ACC7D258E968000759BBB /* ContentView.swift */; };
 		C44ACC80258E968200759BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44ACC7F258E968200759BBB /* Assets.xcassets */; };
@@ -32,6 +34,7 @@
 		C41BFC94259A80BB00D9D26C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		C41BFC97259A82EE00D9D26C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C41BFCA4259BC1DA00D9D26C /* ProfilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesView.swift; sourceTree = "<group>"; };
+		C43A7A8B25ABC474001218C3 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
 		C43D44A725A3B55100E8F75A /* Beer-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Beer-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		C43D44AA25A3B71400E8F75A /* Profile-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		C43D44B125A56AD200E8F75A /* EditBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBeerView.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		C43D44BA25A676C000E8F75A /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
 		C43D44BD25A67FEB00E8F75A /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		C43D44C025A683F600E8F75A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C43D44C325A6AD3C00E8F75A /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		C44ACC78258E968000759BBB /* BrewBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewBuddyApp.swift; sourceTree = "<group>"; };
 		C44ACC7D258E968000759BBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				C43D44B425A5700C00E8F75A /* RatingView.swift */,
 				C43D44B725A66EB900E8F75A /* BeerRowView.swift */,
 				C43D44BD25A67FEB00E8F75A /* ProfileHeaderView.swift */,
+				C43D44C325A6AD3C00E8F75A /* EditProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 				C43D44A725A3B55100E8F75A /* Beer-CoreDataHelpers.swift */,
 				C43D44AA25A3B71400E8F75A /* Profile-CoreDataHelpers.swift */,
 				C43D44BA25A676C000E8F75A /* Binding-OnChange.swift */,
+				C43A7A8B25ABC474001218C3 /* Sequence-Sorting.swift */,
 			);
 			path = BrewBuddy;
 			sourceTree = "<group>";
@@ -197,11 +203,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43D44C425A6AD3C00E8F75A /* EditProfileView.swift in Sources */,
 				C43D44B825A66EB900E8F75A /* BeerRowView.swift in Sources */,
 				C44ACC8D258E9E7700759BBB /* Main.xcdatamodeld in Sources */,
 				C43D44B225A56AD200E8F75A /* EditBeerView.swift in Sources */,
 				C43D44A825A3B55100E8F75A /* Beer-CoreDataHelpers.swift in Sources */,
 				C43D44BB25A676C000E8F75A /* Binding-OnChange.swift in Sources */,
+				C43A7A8C25ABC474001218C3 /* Sequence-Sorting.swift in Sources */,
 				C43D44B525A5700C00E8F75A /* RatingView.swift in Sources */,
 				C43D44BE25A67FEB00E8F75A /* ProfileHeaderView.swift in Sources */,
 				C41BFC8F259A711400D9D26C /* DataController.swift in Sources */,

@@ -8,6 +8,8 @@
 import Foundation
 
 extension Profile {
+    static let colors = ["Pink", "Purple", "Red", "Orange", "Gold", "Green", "Teal", "Light Blue", "Dark Blue", "Midnight", "Dark Gray", "Gray"]
+    
     var profileTitle: String {
         title ?? ""
     }
@@ -16,13 +18,24 @@ extension Profile {
         detail ?? ""
     }
     
-    var projectColor: String {
+    var profileColor: String {
         color ?? "Light Blue"
     }
     
-    var allBeers: [Beer] {
-        let beersArray = beers?.allObjects as? [Beer] ?? []
-        return beersArray
+    var profileBeers: [Beer] {
+        beers?.allObjects as? [Beer] ?? []
+        
+    }
+    
+    var profileBeersDefaultSort: [Beer] {
+        profileBeers.sorted {first, second in
+            if first.rating > second.rating {
+                return true
+            } else if first.rating < second.rating {
+                return false
+            }
+            return first.beerCreationDate < second.beerCreationDate
+        }
     }
     
     static var example: Profile {
