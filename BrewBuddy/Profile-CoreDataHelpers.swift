@@ -51,5 +51,17 @@ extension Profile {
         return profile
     }
     
+    func sortedProfileBeers(using sortOrder: Beer.SortOrder) -> [Beer] {
+        switch sortOrder {
+        case .name:
+            return profileBeers.sorted(by: \Beer.beerName)
+        case .creationDate:
+            return profileBeers.sorted(by: \Beer.beerCreationDate)
+        case .brewery:
+            return profileBeers.sorted(by: \Beer.beerBrewery)
+        case .optimized:
+            return profileBeersDefaultSort
+        }
+    }
 
 }

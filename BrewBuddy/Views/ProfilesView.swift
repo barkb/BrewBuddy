@@ -29,7 +29,7 @@ struct ProfilesView: View {
             List {
                 ForEach(profiles.wrappedValue) { profile in
                     Section(header: ProfileHeaderView(profile: profile)){
-                        ForEach(beers(for: profile)) { beer in
+                        ForEach(profile.sortedProfileBeers(using: sortOrder)) { beer in
                             BeerRowView(beer: beer)
                         }
                         .onDelete{offsets in
@@ -93,20 +93,6 @@ struct ProfilesView: View {
             }//action sheet
         }//NavigationView
     }//body view
-    
-    func beers(for profile: Profile) -> [Beer] {
-        switch sortOrder {
-        case .name:
-            return profile.profileBeers.sorted(by: \Beer.beerName)
-        case .creationDate:
-            return profile.profileBeers.sorted(by: \Beer.beerCreationDate)
-        case .brewery:
-            return profile.profileBeers.sorted(by: \Beer.beerBrewery)
-        case .optimized:
-            return profile.profileBeersDefaultSort
-        }
-    }
-    
 }//ProfilesView
 
 struct ProfilesView_Previews: PreviewProvider {
