@@ -26,36 +26,44 @@ struct ProfilesView: View {
     
     var body: some View {
         NavigationView{
-            List {
-                ForEach(profiles.wrappedValue) { profile in
-                    Section(header: ProfileHeaderView(profile: profile)){
-                        ForEach(profile.sortedProfileBeers(using: sortOrder)) { beer in
-                            BeerRowView(beer: beer)
-                        }
-                        .onDelete{offsets in
-                            //not deleting properly, look at later
-                            for offset in offsets {
-                                let item = profile.profileBeers[offset]
-                                dataController.delete(item)
-                                dataController.save()
-                            }
-                        }
-                        if showActiveProfiles {
-                            Button{
-                                withAnimation{
-                                    let beer = Beer(context: managedObjectContext)
-                                    beer.profile = profile
-                                    beer.creationDate = Date()
-                                    dataController.save()
-                                }
-                            } label: {
-                                Label("Add New Beer", systemImage: "plus")
-                            }
-                        }
-                    }
-                }
-            }
-            .listStyle(InsetGroupedListStyle())
+            Group {
+                if profiles.wrappedValue.isEmpty {
+                    Text("There's nothing here right now")
+                        .foregroundColor(.secondary)
+                } else {
+                    List {
+                        ForEach(profiles.wrappedValue) { profile in
+                            Section(header: ProfileHeaderView(profile: profile)){
+                                ForEach(profile.sortedProfileBeers(using: sortOrder)) { beer in
+                                    BeerRowView(profile: profile, beer: beer)
+                                } // inner ForEach
+                                .onDelete{offsets in
+                                    let allBeers = profile.sortedProfileBeers(using: sortOrder)
+                                    //not deleting properly, look at later
+                                    for offset in offsets {
+                                        let beer = allBeers[offset]
+                                        dataController.delete(beer)
+                                        dataController.save()
+                                    }
+                                } //onDelete
+                                if showActiveProfiles {
+                                    Button{
+                                        withAnimation{
+                                            let beer = Beer(context: managedObjectContext)
+                                            beer.profile = profile
+                                            beer.creationDate = Date()
+                                            dataController.save()
+                                        }
+                                    } label: {
+                                        Label("Add New Beer", systemImage: "plus")
+                                    } // Button
+                                } //showActiveProfiles If
+                            } //Section
+                        } //Outer ForEach
+                    } //List
+                    .listStyle(InsetGroupedListStyle())
+                } //end If
+            } //Group
             .navigationTitle(showActiveProfiles ? "Open Profiles" : "Closed Projects")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -71,18 +79,18 @@ struct ProfilesView: View {
                             }
                         } label: {
                             Label("Add Profile", systemImage: "plus")
-                        }//button
-                    }//if showActiveProfiles
-                }//first toolbaritem
+                        } //button
+                    } //if showActiveProfiles
+                } //first toolbaritem
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         showingSortOrder.toggle()
                     } label: {
                         Label("Sort", systemImage: "arrow.up.arrow.down")
-                    }//button
-                }//second toolbaritem
+                    } //button
+                } //second toolbaritem
                 
-            }//toolbar
+            } //toolbar
             .actionSheet(isPresented: $showingSortOrder) {
                 ActionSheet(title: Text("Sort Beers"), message: nil, buttons: [
                     .default(Text("Optimized")) {sortOrder = .optimized},
@@ -90,10 +98,12 @@ struct ProfilesView: View {
                     .default(Text("Name")) {sortOrder = .name},
                     .default(Text("Brewery")) {sortOrder = .brewery}
                 ])
-            }//action sheet
-        }//NavigationView
-    }//body view
-}//ProfilesView
+            } //action sheet
+            //If none of the above views are selected, show SelectSomethingView()
+            SelectSomethingView()
+        } //NavigationView
+    } //body view
+} //ProfilesView
 
 struct ProfilesView_Previews: PreviewProvider {
     static var dataController = DataController.preview

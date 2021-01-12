@@ -18,6 +18,7 @@ struct EditBeerView: View {
     @State private var rating: Int
     @State private var abv: String
     @State private var ibu: String
+    @State private var favorited: Bool
     
     init(beer: Beer) {
         self.beer = beer
@@ -28,7 +29,7 @@ struct EditBeerView: View {
         _rating = State(wrappedValue: Int(beer.rating))
         _abv = State(wrappedValue: String(beer.abv))
         _ibu = State(wrappedValue: String(beer.ibu))
-        
+        _favorited = State(wrappedValue: beer.favorited)
         
     }
     
@@ -56,9 +57,14 @@ struct EditBeerView: View {
 //                    ibu -= 1
 //                }
             }
+            
             Section(header: Text("Rating")) {
                 RatingView(rating: $rating.onChange(update))
+                Toggle(isOn: $favorited) {
+                    Text("Mark as Favorite:")
+                }
             }
+            
             Section(header: Text("Additional Notes")) {
                 TextField("Description" ,text: $detail.onChange(update))
             }
@@ -77,6 +83,7 @@ struct EditBeerView: View {
         beer.rating = Int16(rating)
         beer.abv = Double(abv) ?? 0.0
         beer.ibu = Int16(ibu) ?? 0
+        beer.favorited = favorited
     }
 }
 

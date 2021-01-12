@@ -52,6 +52,7 @@ class DataController: ObservableObject {
                 beer.creationDate = Date()
                 beer.profile = profile
                 beer.rating = Int16.random(in: 1...5)
+                beer.favorited = Bool.random()
                 
             }
         }

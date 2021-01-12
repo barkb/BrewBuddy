@@ -29,11 +29,23 @@ extension Profile {
     
     var profileBeersDefaultSort: [Beer] {
         profileBeers.sorted {first, second in
+            //First sort by whether beer is favorited
+            if first.favorited {
+                if !second.favorited {
+                    return true
+                }
+            } else if !first.favorited {
+                if second.favorited {
+                    return false
+                }
+            }
+            //If both are favorited or not then sort by higher rating
             if first.rating > second.rating {
                 return true
             } else if first.rating < second.rating {
                 return false
             }
+            //If ratings are the same, then sort by creationdate
             return first.beerCreationDate < second.beerCreationDate
         }
     }
