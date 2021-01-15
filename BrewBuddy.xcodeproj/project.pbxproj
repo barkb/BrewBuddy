@@ -28,6 +28,9 @@
 		C44ACC80258E968200759BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44ACC7F258E968200759BBB /* Assets.xcassets */; };
 		C44ACC83258E968200759BBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44ACC82258E968200759BBB /* Preview Assets.xcassets */; };
 		C44ACC8D258E9E7700759BBB /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C44ACC8B258E9E7700759BBB /* Main.xcdatamodeld */; };
+		C493EBC325B22A70009D32AF /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = C493EBC225B22A6F009D32AF /* Awards.json */; };
+		C493EBC625B22C1F009D32AF /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC525B22C1F009D32AF /* Award.swift */; };
+		C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC825B22CBE009D32AF /* AwardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		C44ACC82258E968200759BBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C44ACC84258E968200759BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44ACC8C258E9E7700759BBB /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		C493EBC225B22A6F009D32AF /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
+		C493EBC525B22C1F009D32AF /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		C493EBC825B22CBE009D32AF /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 				C43D44BD25A67FEB00E8F75A /* ProfileHeaderView.swift */,
 				C43D44C325A6AD3C00E8F75A /* EditProfileView.swift */,
 				C43A7A8E25AD1FB1001218C3 /* SelectSomethingView.swift */,
+				C493EBC825B22CBE009D32AF /* AwardsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +124,8 @@
 				C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */,
 				C44ACC7D258E968000759BBB /* ContentView.swift */,
 				C44ACC8B258E9E7700759BBB /* Main.xcdatamodeld */,
+				C493EBC225B22A6F009D32AF /* Awards.json */,
+				C493EBC525B22C1F009D32AF /* Award.swift */,
 				C44ACC7F258E968200759BBB /* Assets.xcassets */,
 				C43D44C025A683F600E8F75A /* Colors.xcassets */,
 				C44ACC84258E968200759BBB /* Info.plist */,
@@ -197,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C43D44C125A683F600E8F75A /* Colors.xcassets in Resources */,
+				C493EBC325B22A70009D32AF /* Awards.json in Resources */,
 				C44ACC83258E968200759BBB /* Preview Assets.xcassets in Resources */,
 				C44ACC80258E968200759BBB /* Assets.xcassets in Resources */,
 			);
@@ -210,9 +220,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C43D44C425A6AD3C00E8F75A /* EditProfileView.swift in Sources */,
+				C493EBC625B22C1F009D32AF /* Award.swift in Sources */,
 				C43D44B825A66EB900E8F75A /* BeerRowView.swift in Sources */,
 				C44ACC8D258E9E7700759BBB /* Main.xcdatamodeld in Sources */,
 				C43D44B225A56AD200E8F75A /* EditBeerView.swift in Sources */,
+				C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */,
 				C43D44A825A3B55100E8F75A /* Beer-CoreDataHelpers.swift in Sources */,
 				C43D44BB25A676C000E8F75A /* Binding-OnChange.swift in Sources */,
 				C43A7A9225AD2849001218C3 /* Bundle-Decodable.swift in Sources */,
