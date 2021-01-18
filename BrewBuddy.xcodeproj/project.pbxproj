@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C404DF3C25B244560071BF94 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404DF3B25B244560071BF94 /* Color-Additions.swift */; };
 		C41BFC8F259A711400D9D26C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC8E259A711400D9D26C /* DataController.swift */; };
 		C41BFC95259A80BB00D9D26C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41BFC94259A80BB00D9D26C /* CloudKit.framework */; };
 		C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC97259A82EE00D9D26C /* HomeView.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C404DF3B25B244560071BF94 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
 		C41BFC8E259A711400D9D26C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrewBuddy.entitlements; sourceTree = "<group>"; };
 		C41BFC94259A80BB00D9D26C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -136,6 +138,7 @@
 				C43D44BA25A676C000E8F75A /* Binding-OnChange.swift */,
 				C43A7A8B25ABC474001218C3 /* Sequence-Sorting.swift */,
 				C43A7A9125AD2849001218C3 /* Bundle-Decodable.swift */,
+				C404DF3B25B244560071BF94 /* Color-Additions.swift */,
 			);
 			path = BrewBuddy;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				C43D44B225A56AD200E8F75A /* EditBeerView.swift in Sources */,
 				C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */,
 				C43D44A825A3B55100E8F75A /* Beer-CoreDataHelpers.swift in Sources */,
+				C404DF3C25B244560071BF94 /* Color-Additions.swift in Sources */,
 				C43D44BB25A676C000E8F75A /* Binding-OnChange.swift in Sources */,
 				C43A7A9225AD2849001218C3 /* Bundle-Decodable.swift in Sources */,
 				C43A7A8C25ABC474001218C3 /* Sequence-Sorting.swift in Sources */,
