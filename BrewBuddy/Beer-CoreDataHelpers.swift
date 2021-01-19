@@ -13,7 +13,7 @@ extension Beer {
     }
     
     var beerName: String {
-        name ?? "New Beer"
+        name ?? NSLocalizedString("New Beer", comment: "Add a new beer")
     }
     
     var beerDetail: String {

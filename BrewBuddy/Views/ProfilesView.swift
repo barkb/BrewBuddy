@@ -64,7 +64,7 @@ struct ProfilesView: View {
                     .listStyle(InsetGroupedListStyle())
                 } //end If
             } //Group
-            .navigationTitle(showActiveProfiles ? "Open Profiles" : "Closed Projects")
+            .navigationTitle(showActiveProfiles ? "Open Profiles" : "Closed Profiles")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     //Need to debug later, new profile not sliding in??

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C404DF3C25B244560071BF94 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404DF3B25B244560071BF94 /* Color-Additions.swift */; };
+		C404DF4825B62FF00071BF94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C404DF4725B62FF00071BF94 /* Localizable.strings */; };
+		C404DF4D25B637570071BF94 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = C404DF4C25B637570071BF94 /* Localizable.stringsdict */; };
 		C41BFC8F259A711400D9D26C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC8E259A711400D9D26C /* DataController.swift */; };
 		C41BFC95259A80BB00D9D26C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41BFC94259A80BB00D9D26C /* CloudKit.framework */; };
 		C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC97259A82EE00D9D26C /* HomeView.swift */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		C404DF3B25B244560071BF94 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
+		C404DF4725B62FF00071BF94 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		C404DF4C25B637570071BF94 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		C41BFC8E259A711400D9D26C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrewBuddy.entitlements; sourceTree = "<group>"; };
 		C41BFC94259A80BB00D9D26C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -88,15 +92,16 @@
 		C41BFC9E259A83C100D9D26C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C44ACC7D258E968000759BBB /* ContentView.swift */,
 				C41BFC97259A82EE00D9D26C /* HomeView.swift */,
 				C41BFCA4259BC1DA00D9D26C /* ProfilesView.swift */,
+				C493EBC825B22CBE009D32AF /* AwardsView.swift */,
 				C43D44B125A56AD200E8F75A /* EditBeerView.swift */,
+				C43D44C325A6AD3C00E8F75A /* EditProfileView.swift */,
 				C43D44B425A5700C00E8F75A /* RatingView.swift */,
 				C43D44B725A66EB900E8F75A /* BeerRowView.swift */,
 				C43D44BD25A67FEB00E8F75A /* ProfileHeaderView.swift */,
-				C43D44C325A6AD3C00E8F75A /* EditProfileView.swift */,
 				C43A7A8E25AD1FB1001218C3 /* SelectSomethingView.swift */,
-				C493EBC825B22CBE009D32AF /* AwardsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,9 +127,10 @@
 			isa = PBXGroup;
 			children = (
 				C41BFC9E259A83C100D9D26C /* Views */,
+				C404DF4C25B637570071BF94 /* Localizable.stringsdict */,
+				C404DF4725B62FF00071BF94 /* Localizable.strings */,
 				C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */,
 				C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */,
-				C44ACC7D258E968000759BBB /* ContentView.swift */,
 				C44ACC8B258E9E7700759BBB /* Main.xcdatamodeld */,
 				C493EBC225B22A6F009D32AF /* Awards.json */,
 				C493EBC525B22C1F009D32AF /* Award.swift */,
@@ -208,10 +214,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C404DF4825B62FF00071BF94 /* Localizable.strings in Resources */,
 				C43D44C125A683F600E8F75A /* Colors.xcassets in Resources */,
 				C493EBC325B22A70009D32AF /* Awards.json in Resources */,
 				C44ACC83258E968200759BBB /* Preview Assets.xcassets in Resources */,
 				C44ACC80258E968200759BBB /* Assets.xcassets in Resources */,
+				C404DF4D25B637570071BF94 /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

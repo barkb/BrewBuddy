@@ -62,7 +62,7 @@ struct HomeView: View {
         } //NavigationView
     } //body
     
-    @ViewBuilder func list(_ title: String, for beers: FetchedResults<Beer>.SubSequence) -> some View {
+    @ViewBuilder func list(_ title: LocalizedStringKey, for beers: FetchedResults<Beer>.SubSequence) -> some View {
             if beers.isEmpty {
                 EmptyView()
             } else {

@@ -11,7 +11,7 @@ extension Profile {
     static let colors = ["Pink", "Purple", "Red", "Orange", "Gold", "Green", "Teal", "Light Blue", "Dark Blue", "Midnight", "Dark Gray", "Gray"]
     
     var profileTitle: String {
-        title ?? ""
+        title ?? NSLocalizedString("New Profile", comment: "Create a new profile")
     }
     
     var profileDetail: String {
