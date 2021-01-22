@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C404DF3C25B244560071BF94 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404DF3B25B244560071BF94 /* Color-Additions.swift */; };
-		C404DF4825B62FF00071BF94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C404DF4725B62FF00071BF94 /* Localizable.strings */; };
-		C404DF4D25B637570071BF94 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = C404DF4C25B637570071BF94 /* Localizable.stringsdict */; };
 		C41BFC8F259A711400D9D26C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC8E259A711400D9D26C /* DataController.swift */; };
 		C41BFC95259A80BB00D9D26C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41BFC94259A80BB00D9D26C /* CloudKit.framework */; };
 		C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC97259A82EE00D9D26C /* HomeView.swift */; };
@@ -31,15 +29,15 @@
 		C44ACC80258E968200759BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44ACC7F258E968200759BBB /* Assets.xcassets */; };
 		C44ACC83258E968200759BBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44ACC82258E968200759BBB /* Preview Assets.xcassets */; };
 		C44ACC8D258E9E7700759BBB /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C44ACC8B258E9E7700759BBB /* Main.xcdatamodeld */; };
-		C493EBC325B22A70009D32AF /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = C493EBC225B22A6F009D32AF /* Awards.json */; };
+		C480AEFC25BB572F00BB8EDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C480AEFE25BB572F00BB8EDC /* Localizable.strings */; };
+		C480AF0125BB5C2D00BB8EDC /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = C480AF0325BB5C2D00BB8EDC /* Localizable.stringsdict */; };
+		C480AF0725BB5D1C00BB8EDC /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = C480AF0925BB5D1C00BB8EDC /* Awards.json */; };
 		C493EBC625B22C1F009D32AF /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC525B22C1F009D32AF /* Award.swift */; };
 		C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC825B22CBE009D32AF /* AwardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C404DF3B25B244560071BF94 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
-		C404DF4725B62FF00071BF94 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		C404DF4C25B637570071BF94 /* Localizable.stringsdict */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; path = Localizable.stringsdict; sourceTree = "<group>"; };
 		C41BFC8E259A711400D9D26C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrewBuddy.entitlements; sourceTree = "<group>"; };
 		C41BFC94259A80BB00D9D26C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -64,7 +62,12 @@
 		C44ACC82258E968200759BBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C44ACC84258E968200759BBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44ACC8C258E9E7700759BBB /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
-		C493EBC225B22A6F009D32AF /* Awards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
+		C480AEFD25BB572F00BB8EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C480AF0025BB573D00BB8EDC /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C480AF0225BB5C2D00BB8EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		C480AF0525BB5C3500BB8EDC /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = hu; path = hu.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		C480AF0825BB5D1C00BB8EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
+		C480AF0B25BB5D2000BB8EDC /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = hu; path = hu.lproj/Awards.json; sourceTree = "<group>"; };
 		C493EBC525B22C1F009D32AF /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		C493EBC825B22CBE009D32AF /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,17 +130,17 @@
 			isa = PBXGroup;
 			children = (
 				C41BFC9E259A83C100D9D26C /* Views */,
-				C404DF4C25B637570071BF94 /* Localizable.stringsdict */,
-				C404DF4725B62FF00071BF94 /* Localizable.strings */,
+				C480AF0325BB5C2D00BB8EDC /* Localizable.stringsdict */,
+				C480AEFE25BB572F00BB8EDC /* Localizable.strings */,
 				C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */,
 				C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */,
 				C44ACC8B258E9E7700759BBB /* Main.xcdatamodeld */,
-				C493EBC225B22A6F009D32AF /* Awards.json */,
-				C493EBC525B22C1F009D32AF /* Award.swift */,
+				C480AF0925BB5D1C00BB8EDC /* Awards.json */,
 				C44ACC7F258E968200759BBB /* Assets.xcassets */,
 				C43D44C025A683F600E8F75A /* Colors.xcassets */,
 				C44ACC84258E968200759BBB /* Info.plist */,
 				C44ACC81258E968200759BBB /* Preview Content */,
+				C493EBC525B22C1F009D32AF /* Award.swift */,
 				C41BFC8E259A711400D9D26C /* DataController.swift */,
 				C43D44A725A3B55100E8F75A /* Beer-CoreDataHelpers.swift */,
 				C43D44AA25A3B71400E8F75A /* Profile-CoreDataHelpers.swift */,
@@ -198,6 +201,7 @@
 			knownRegions = (
 				en,
 				Base,
+				hu,
 			);
 			mainGroup = C44ACC6F258E968000759BBB;
 			productRefGroup = C44ACC79258E968000759BBB /* Products */;
@@ -214,12 +218,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C404DF4825B62FF00071BF94 /* Localizable.strings in Resources */,
+				C480AEFC25BB572F00BB8EDC /* Localizable.strings in Resources */,
 				C43D44C125A683F600E8F75A /* Colors.xcassets in Resources */,
-				C493EBC325B22A70009D32AF /* Awards.json in Resources */,
+				C480AF0725BB5D1C00BB8EDC /* Awards.json in Resources */,
 				C44ACC83258E968200759BBB /* Preview Assets.xcassets in Resources */,
 				C44ACC80258E968200759BBB /* Assets.xcassets in Resources */,
-				C404DF4D25B637570071BF94 /* Localizable.stringsdict in Resources */,
+				C480AF0125BB5C2D00BB8EDC /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +258,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C480AEFE25BB572F00BB8EDC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C480AEFD25BB572F00BB8EDC /* en */,
+				C480AF0025BB573D00BB8EDC /* hu */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C480AF0325BB5C2D00BB8EDC /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C480AF0225BB5C2D00BB8EDC /* en */,
+				C480AF0525BB5C3500BB8EDC /* hu */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
+		C480AF0925BB5D1C00BB8EDC /* Awards.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C480AF0825BB5D1C00BB8EDC /* en */,
+				C480AF0B25BB5D2000BB8EDC /* hu */,
+			);
+			name = Awards.json;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C44ACC85258E968200759BBB /* Debug */ = {
