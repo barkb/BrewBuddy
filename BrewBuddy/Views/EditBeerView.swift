@@ -60,7 +60,7 @@ struct EditBeerView: View {
             
             Section(header: Text("Rating")) {
                 RatingView(rating: $rating.onChange(update))
-                Toggle(isOn: $favorited) {
+                Toggle(isOn: $favorited.onChange(update)) {
                     Text("Mark as Favorite:")
                 }
             }

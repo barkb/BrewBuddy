@@ -69,7 +69,7 @@ struct ProfilesView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     //Need to debug later, new profile not sliding in??
                     //Might delete later, depending on what is done with profiles
-                    if showActiveProfiles {
+                    if showActiveProfiles == true {
                         Button {
                             withAnimation {
                                 let profile = Profile(context: managedObjectContext)
