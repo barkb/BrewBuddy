@@ -78,7 +78,11 @@ struct ProfilesView: View {
                                 dataController.save()
                             }
                         } label: {
-                            Label("Add Profile", systemImage: "plus")
+                            if UIAccessibility.isVoiceOverRunning {
+                                Text("Add Profile")
+                            } else {
+                                Label("Add Profile", systemImage: "plus")
+                            }
                         } //button
                     } //if showActiveProfiles
                 } //first toolbaritem

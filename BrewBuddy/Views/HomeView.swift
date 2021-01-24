@@ -45,6 +45,8 @@ struct HomeView: View {
                                 .background(Color.secondarySystemGroupedBackground)
                                 .cornerRadius(10)
                                 .shadow(color: Color.black.opacity(0.2), radius: 5)
+                                .accessibilityElement(children: .ignore)
+                                accessibilityLabel("\(profile.profileTitle), \(profile.profileBeers.count) beers.")
                             } //ForEach
                         } //LazyHGrid
                         .padding([.horizontal, .top])
@@ -91,6 +93,7 @@ struct HomeView: View {
                         .background(Color.secondarySystemGroupedBackground)
                         .cornerRadius(10)
                         .shadow(color: Color.black.opacity(0.2), radius: 5)
+                        
                     }
                 }
             }

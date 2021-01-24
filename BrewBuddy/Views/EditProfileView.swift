@@ -53,11 +53,18 @@ struct EditProfileView: View {
                             color = item
                             update()
                         }
+                        .accessibilityElement(children: .ignore)
+                        .accessibilityAddTraits(
+                            item == color
+                                ? [.isButton, .isSelected]
+                                : .isButton
+                        )
+                        .accessibilityLabel(LocalizedStringKey(item))
                     }
                 }
                 .padding(.vertical)
             } //Section 2
-            Section(footer: Text("Closing a profile moves it from the Open to Closed tab; deleting it removes the profile entirely")) {
+            Section(footer: Text("Closing a profile moves it from the Open to Closed tab; deleting it removes the profile entirely.")) {
                 Button(profile.isActive ? "Close this profile" : "Reopen this profile") {
                     profile.isActive.toggle()
                     update()

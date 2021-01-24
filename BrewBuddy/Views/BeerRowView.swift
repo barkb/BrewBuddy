@@ -36,6 +36,14 @@ struct BeerRowView: View {
         }
     }
     
+    var label: Text {
+        if beer.favorited {
+            return Text("\(beer.beerName), favorited.")
+        } else {
+            return Text("\(beer.beerName), rating: \(beer.rating).")
+        }
+    }
+    
     var body: some View {
         NavigationLink(destination: EditBeerView(beer: beer)) {
             Label {
@@ -44,6 +52,7 @@ struct BeerRowView: View {
                 icon
             }
         }
+        .accessibility(label: label)
     }
 }
 
