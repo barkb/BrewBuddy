@@ -32,6 +32,8 @@
 		C480AEFC25BB572F00BB8EDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C480AEFE25BB572F00BB8EDC /* Localizable.strings */; };
 		C480AF0125BB5C2D00BB8EDC /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = C480AF0325BB5C2D00BB8EDC /* Localizable.stringsdict */; };
 		C480AF0725BB5D1C00BB8EDC /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = C480AF0925BB5D1C00BB8EDC /* Awards.json */; };
+		C480AF0E25BE3E7900BB8EDC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C480AF0D25BE3E7900BB8EDC /* ListView.swift */; };
+		C480AF1125BE400D00BB8EDC /* ProfileSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C480AF1025BE400D00BB8EDC /* ProfileSummaryView.swift */; };
 		C493EBC625B22C1F009D32AF /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC525B22C1F009D32AF /* Award.swift */; };
 		C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC825B22CBE009D32AF /* AwardsView.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		C480AF0525BB5C3500BB8EDC /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = hu; path = hu.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		C480AF0825BB5D1C00BB8EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
 		C480AF0B25BB5D2000BB8EDC /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = hu; path = hu.lproj/Awards.json; sourceTree = "<group>"; };
+		C480AF0D25BE3E7900BB8EDC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		C480AF1025BE400D00BB8EDC /* ProfileSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummaryView.swift; sourceTree = "<group>"; };
 		C493EBC525B22C1F009D32AF /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		C493EBC825B22CBE009D32AF /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,8 @@
 			children = (
 				C44ACC7D258E968000759BBB /* ContentView.swift */,
 				C41BFC97259A82EE00D9D26C /* HomeView.swift */,
+				C480AF1025BE400D00BB8EDC /* ProfileSummaryView.swift */,
+				C480AF0D25BE3E7900BB8EDC /* ListView.swift */,
 				C41BFCA4259BC1DA00D9D26C /* ProfilesView.swift */,
 				C493EBC825B22CBE009D32AF /* AwardsView.swift */,
 				C43D44B125A56AD200E8F75A /* EditBeerView.swift */,
@@ -237,6 +243,7 @@
 				C43D44C425A6AD3C00E8F75A /* EditProfileView.swift in Sources */,
 				C493EBC625B22C1F009D32AF /* Award.swift in Sources */,
 				C43D44B825A66EB900E8F75A /* BeerRowView.swift in Sources */,
+				C480AF1125BE400D00BB8EDC /* ProfileSummaryView.swift in Sources */,
 				C44ACC8D258E9E7700759BBB /* Main.xcdatamodeld in Sources */,
 				C43D44B225A56AD200E8F75A /* EditBeerView.swift in Sources */,
 				C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */,
@@ -251,6 +258,7 @@
 				C44ACC7E258E968000759BBB /* ContentView.swift in Sources */,
 				C43D44AB25A3B71400E8F75A /* Profile-CoreDataHelpers.swift in Sources */,
 				C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */,
+				C480AF0E25BE3E7900BB8EDC /* ListView.swift in Sources */,
 				C43A7A8F25AD1FB1001218C3 /* SelectSomethingView.swift in Sources */,
 				C41BFCA5259BC1DA00D9D26C /* ProfilesView.swift in Sources */,
 				C44ACC7C258E968000759BBB /* BrewBuddyApp.swift in Sources */,

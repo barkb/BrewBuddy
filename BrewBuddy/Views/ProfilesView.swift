@@ -24,6 +24,55 @@ struct ProfilesView: View {
         profiles = FetchRequest<Profile>(entity: Profile.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Profile.creationDate, ascending: false)], predicate: NSPredicate(format: "isActive = %d"))
     }
     
+    var profilesList: some View {
+        List {
+            ForEach(profiles.wrappedValue) { profile in
+                Section(header: ProfileHeaderView(profile: profile)){
+                    ForEach(profile.sortedProfileBeers(using: sortOrder)) { beer in
+                        BeerRowView(profile: profile, beer: beer)
+                    } // inner ForEach
+                    .onDelete{offsets in
+                        delete(offsets, from: profile)
+                    } //onDelete
+                    if showActiveProfiles {
+                        Button{
+                            addBeer(to: profile)
+                        } label: {
+                            Label("Add New Beer", systemImage: "plus")
+                        } // Button
+                    } //showActiveProfiles If
+                } //Section
+            } //Outer ForEach
+        } //List
+        .listStyle(InsetGroupedListStyle())
+    } //profilesList
+    
+    var addProfileToolbarItem: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing) {
+            //Need to debug later, new profile not sliding in??
+            //Might delete later, depending on what is done with profiles
+            if showActiveProfiles == true {
+                Button(action: addProfile) {
+                    if UIAccessibility.isVoiceOverRunning {
+                        Text("Add Profile")
+                    } else {
+                        Label("Add Profile", systemImage: "plus")
+                    }
+                } //button
+            } //if showActiveProfiles
+        } //ToolbarItem
+    }
+    
+    var sortOrderToolbarItem: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarLeading) {
+            Button {
+                showingSortOrder.toggle()
+            } label: {
+                Label("Sort", systemImage: "arrow.up.arrow.down")
+            } //button
+        } //ToolbarItem
+    }
+    
     var body: some View {
         NavigationView{
             Group {
@@ -31,69 +80,13 @@ struct ProfilesView: View {
                     Text("There's nothing here right now")
                         .foregroundColor(.secondary)
                 } else {
-                    List {
-                        ForEach(profiles.wrappedValue) { profile in
-                            Section(header: ProfileHeaderView(profile: profile)){
-                                ForEach(profile.sortedProfileBeers(using: sortOrder)) { beer in
-                                    BeerRowView(profile: profile, beer: beer)
-                                } // inner ForEach
-                                .onDelete{offsets in
-                                    let allBeers = profile.sortedProfileBeers(using: sortOrder)
-                                    //not deleting properly, look at later
-                                    for offset in offsets {
-                                        let beer = allBeers[offset]
-                                        dataController.delete(beer)
-                                        dataController.save()
-                                    }
-                                } //onDelete
-                                if showActiveProfiles {
-                                    Button{
-                                        withAnimation{
-                                            let beer = Beer(context: managedObjectContext)
-                                            beer.profile = profile
-                                            beer.creationDate = Date()
-                                            dataController.save()
-                                        }
-                                    } label: {
-                                        Label("Add New Beer", systemImage: "plus")
-                                    } // Button
-                                } //showActiveProfiles If
-                            } //Section
-                        } //Outer ForEach
-                    } //List
-                    .listStyle(InsetGroupedListStyle())
+                    profilesList
                 } //end If
             } //Group
             .navigationTitle(showActiveProfiles ? "Open Profiles" : "Closed Profiles")
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    //Need to debug later, new profile not sliding in??
-                    //Might delete later, depending on what is done with profiles
-                    if showActiveProfiles == true {
-                        Button {
-                            withAnimation {
-                                let profile = Profile(context: managedObjectContext)
-                                profile.isActive = true
-                                profile.creationDate = Date()
-                                dataController.save()
-                            }
-                        } label: {
-                            if UIAccessibility.isVoiceOverRunning {
-                                Text("Add Profile")
-                            } else {
-                                Label("Add Profile", systemImage: "plus")
-                            }
-                        } //button
-                    } //if showActiveProfiles
-                } //first toolbaritem
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        showingSortOrder.toggle()
-                    } label: {
-                        Label("Sort", systemImage: "arrow.up.arrow.down")
-                    } //button
-                } //second toolbaritem
-                
+                addProfileToolbarItem
+                sortOrderToolbarItem
             } //toolbar
             .actionSheet(isPresented: $showingSortOrder) {
                 ActionSheet(title: Text("Sort Beers"), message: nil, buttons: [
@@ -107,7 +100,36 @@ struct ProfilesView: View {
             SelectSomethingView()
         } //NavigationView
     } //body view
+    
+    func addBeer(to profile: Profile) {
+        withAnimation{
+            let beer = Beer(context: managedObjectContext)
+            beer.profile = profile
+            beer.creationDate = Date()
+            dataController.save()
+        }
+    }
+    
+    func addProfile() {
+        withAnimation {
+            let profile = Profile(context: managedObjectContext)
+            profile.isActive = true
+            profile.creationDate = Date()
+            dataController.save()
+        }
+    }
+    
+    func delete(_ offsets: IndexSet, from profile: Profile) {
+        let allBeers = profile.sortedProfileBeers(using: sortOrder)
+        //not deleting properly, look at later
+        for offset in offsets {
+            let beer = allBeers[offset]
+            dataController.delete(beer)
+            dataController.save()
+        }
+    }
 } //ProfilesView
+
 
 struct ProfilesView_Previews: PreviewProvider {
     static var dataController = DataController.preview

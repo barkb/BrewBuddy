@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 extension Profile {
     static let colors = ["Pink", "Purple", "Red", "Orange", "Gold", "Green", "Teal", "Light Blue", "Dark Blue", "Midnight", "Dark Gray", "Gray"]
     
@@ -48,6 +48,10 @@ extension Profile {
             //If ratings are the same, then sort by creationdate
             return first.beerCreationDate < second.beerCreationDate
         }
+    }
+    
+    var label: LocalizedStringKey {
+        LocalizedStringKey("\(profileTitle), \(profileBeers.count) beers.")
     }
     
     static var example: Profile {

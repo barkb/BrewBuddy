@@ -33,28 +33,14 @@ struct HomeView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         //This would be a spot to look into adding "categories" such as top rated, favorite brewery, and the like
                         LazyHGrid(rows: profileRows) {
-                            ForEach(profiles) { profile in
-                                VStack(alignment: .leading) {
-                                    Text("\(profile.profileBeers.count) beers")
-                                        .font(.caption)
-                                        .foregroundColor(.secondary)
-                                    Text(profile.profileTitle)
-                                        .font(.title2)
-                                } //Inner VStack
-                                .padding()
-                                .background(Color.secondarySystemGroupedBackground)
-                                .cornerRadius(10)
-                                .shadow(color: Color.black.opacity(0.2), radius: 5)
-                                .accessibilityElement(children: .ignore)
-                                accessibilityLabel("\(profile.profileTitle), \(profile.profileBeers.count) beers.")
-                            } //ForEach
+                            ForEach(profiles, content: ProfileSummaryView.init)
                         } //LazyHGrid
                         .padding([.horizontal, .top])
                         .fixedSize(horizontal: false, vertical: true)
                     } //Inner ScrollView
                     VStack(alignment: .leading) {
-                        list("Top Rated", for: beers.wrappedValue.prefix(3))
-                        list("More to explore", for: beers.wrappedValue.dropFirst(3))
+                        ListView(title: "Top Rated", beers: beers.wrappedValue.prefix(3))
+                        ListView(title: "More to explore", beers: beers.wrappedValue.dropFirst(3))
                     } // Middle VStack
                     .padding(.horizontal)
                 } //Topmost VStack
@@ -63,41 +49,6 @@ struct HomeView: View {
             .navigationTitle("Home")
         } //NavigationView
     } //body
-    
-    @ViewBuilder func list(_ title: LocalizedStringKey, for beers: FetchedResults<Beer>.SubSequence) -> some View {
-            if beers.isEmpty {
-                EmptyView()
-            } else {
-                Text(title)
-                    .font(.headline)
-                    .foregroundColor(.secondary)
-                    .padding(.top)
-                ForEach(beers) { beer in
-                    NavigationLink(destination: EditBeerView(beer: beer)) {
-                        HStack(spacing: 20) {
-                            Circle()
-                                .stroke(Color(beer.profile?.profileTitle ?? "Light Blue"), lineWidth: 3)
-                                .frame(width: 44, height: 44)
-                            VStack(alignment: .leading) {
-                                Text(beer.beerName)
-                                    .font(.title2)
-                                    .foregroundColor(.primary)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                if beer.beerBrewery.isEmpty == false {
-                                    Text(beer.beerBrewery)
-                                        .foregroundColor(.secondary)
-                                }
-                            }
-                        }
-                        .padding()
-                        .background(Color.secondarySystemGroupedBackground)
-                        .cornerRadius(10)
-                        .shadow(color: Color.black.opacity(0.2), radius: 5)
-                        
-                    }
-                }
-            }
-        }
 } //end View
 
 //Button("Add Data") {

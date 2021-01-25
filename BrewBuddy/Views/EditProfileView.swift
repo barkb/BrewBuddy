@@ -38,29 +38,7 @@ struct EditProfileView: View {
             } //Section 1
             Section(header: Text("Custom profile color")) {
                 LazyVGrid(columns: colorColumns) {
-                    ForEach(Profile.colors, id: \.self){item in
-                        ZStack {
-                            Color(item)
-                                .aspectRatio(1, contentMode: .fit)
-                                .cornerRadius(6)
-                            if item == color {
-                                Image(systemName: "checkmark.circle")
-                                    .foregroundColor(.white)
-                                    .font(.largeTitle)
-                            }
-                        }
-                        .onTapGesture {
-                            color = item
-                            update()
-                        }
-                        .accessibilityElement(children: .ignore)
-                        .accessibilityAddTraits(
-                            item == color
-                                ? [.isButton, .isSelected]
-                                : .isButton
-                        )
-                        .accessibilityLabel(LocalizedStringKey(item))
-                    }
+                    ForEach(Profile.colors, id: \.self, content: colorButton)
                 }
                 .padding(.vertical)
             } //Section 2
@@ -92,6 +70,30 @@ struct EditProfileView: View {
     func delete() {
         dataController.delete(profile)
         presentationMode.wrappedValue.dismiss()
+    }
+    
+    func colorButton(for item: String) -> some View {
+        ZStack {
+            Color(item)
+                .aspectRatio(1, contentMode: .fit)
+                .cornerRadius(6)
+            if item == color {
+                Image(systemName: "checkmark.circle")
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+            }
+        }
+        .onTapGesture {
+            color = item
+            update()
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(
+            item == color
+                ? [.isButton, .isSelected]
+                : .isButton
+        )
+        .accessibilityLabel(LocalizedStringKey(item))
     }
 }
 
