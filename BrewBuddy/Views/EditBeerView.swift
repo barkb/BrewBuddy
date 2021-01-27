@@ -10,7 +10,7 @@ import SwiftUI
 struct EditBeerView: View {
     let beer: Beer
     @EnvironmentObject var dataController: DataController
-    
+
     @State private var name: String
     @State private var detail: String
     @State private var type: String
@@ -19,7 +19,7 @@ struct EditBeerView: View {
     @State private var abv: String
     @State private var ibu: String
     @State private var favorited: Bool
-    
+
     init(beer: Beer) {
         self.beer = beer
         _name = State(wrappedValue: beer.beerName)
@@ -30,9 +30,8 @@ struct EditBeerView: View {
         _abv = State(wrappedValue: String(beer.abv))
         _ibu = State(wrappedValue: String(beer.ibu))
         _favorited = State(wrappedValue: beer.favorited)
-        
     }
-    
+
     var body: some View {
         Form {
             Section(header: Text("Basic Attributes")) {
@@ -41,9 +40,9 @@ struct EditBeerView: View {
                 TextField("Beer Type", text: $type.onChange(update))
             }
             Section(header: Text("Advanced Attributes")) {
-                TextField("ABV: ", text:$abv.onChange(update))
+                TextField("ABV: ", text: $abv.onChange(update))
                     .keyboardType(.decimalPad)
-                TextField("IBU: ", text:$ibu.onChange(update))
+                TextField("IBU: ", text: $ibu.onChange(update))
                     .keyboardType(.numberPad)
 //                Stepper("ABV: \(abv, specifier: "%.1f")") {
 //                    abv += 0.1
@@ -57,25 +56,25 @@ struct EditBeerView: View {
 //                    ibu -= 1
 //                }
             }
-            
+
             Section(header: Text("Rating")) {
                 RatingView(rating: $rating.onChange(update))
                 Toggle(isOn: $favorited.onChange(update)) {
                     Text("Mark as Favorite:")
                 }
             }
-            
+
             Section(header: Text("Additional Notes")) {
-                TextField("Description" ,text: $detail.onChange(update))
+                TextField("Description", text: $detail.onChange(update))
             }
         }
         .navigationTitle("Edit Beer")
         .onDisappear(perform: dataController.save)
     }
-    
+
     func update() {
         beer.profile?.objectWillChange.send()
-        
+
         beer.name = name
         beer.detail = detail
         beer.brewery = brewery

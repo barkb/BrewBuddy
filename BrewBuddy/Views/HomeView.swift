@@ -10,20 +10,32 @@ import SwiftUI
 struct HomeView: View {
     static let tag: String? = "Home"
     @EnvironmentObject var dataController: DataController
-    @FetchRequest(entity: Profile.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Profile.title, ascending: true)], predicate: NSPredicate(format: "isActive = true")) var profiles: FetchedResults<Profile>
+    @FetchRequest(
+        entity: Profile.entity(),
+        sortDescriptors: [NSSortDescriptor(
+                            keyPath: \Profile.title,
+                            ascending: true)
+        ],
+        predicate: NSPredicate(format: "isActive = true")
+    ) var profiles: FetchedResults<Profile>
     let beers: FetchRequest<Beer>
-    
+
     var profileRows: [GridItem] {
         [GridItem(.fixed(100))]
     }
-    
+
     init() {
         let request: NSFetchRequest<Beer> = Beer.fetchRequest()
         let favoritedPredicate = NSPredicate(format: "favorited = true")
         let ratingPredicate = NSPredicate(format: "rating >= 4")
         let activePredicate = NSPredicate(format: "profile.isActive = true")
-        let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [activePredicate, favoritedPredicate, ratingPredicate])
-        
+        let compoundPredicate = NSCompoundPredicate(
+            type: .and,
+            subpredicates: [
+                activePredicate, favoritedPredicate, ratingPredicate
+            ]
+        )
+
         request.predicate = compoundPredicate
         request.sortDescriptors = [
             NSSortDescriptor(keyPath: \Beer.rating, ascending: false)
@@ -31,26 +43,27 @@ struct HomeView: View {
         request.fetchLimit = 10
         beers = FetchRequest(fetchRequest: request)
     }
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
                     ScrollView(.horizontal, showsIndicators: false) {
-                        //This would be a spot to look into adding "categories" such as top rated, favorite brewery, and the like
+                        // This would be a spot to look into adding "categories" such as top
+                        // rated, favorite brewery, and the like
                         LazyHGrid(rows: profileRows) {
                             ForEach(profiles, content: ProfileSummaryView.init)
-                        } //LazyHGrid
+                        } // LazyHGrid
                         .padding([.horizontal, .top])
                         .fixedSize(horizontal: false, vertical: true)
-                    } //Inner ScrollView
+                    } // Inner ScrollView
                     VStack(alignment: .leading) {
                         ListView(title: "Top Rated", beers: beers.wrappedValue.prefix(3))
                         ListView(title: "More to explore", beers: beers.wrappedValue.dropFirst(3))
                     } // Middle VStack
                     .padding(.horizontal)
-                } //Topmost VStack
-            } //Topmost ScrollView
+                } // Topmost VStack
+            } // Topmost ScrollView
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
             .toolbar {
@@ -59,10 +72,9 @@ struct HomeView: View {
                     try? dataController.createSampleData()
                 }
             }
-        } //NavigationView
-    } //body
-} //end View
-
+        } // NavigationView
+    } // body
+} // end View
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

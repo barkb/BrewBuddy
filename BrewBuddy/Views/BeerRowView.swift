@@ -10,7 +10,7 @@ import SwiftUI
 struct BeerRowView: View {
     @ObservedObject var profile: Profile
     @ObservedObject var beer: Beer
-    
+
     var icon: some View {
         if beer.favorited {
             return Image(systemName: "star.fill")
@@ -35,7 +35,7 @@ struct BeerRowView: View {
                 .foregroundColor(.clear)
         }
     }
-    
+
     var label: Text {
         if beer.favorited {
             return Text("\(beer.beerName), favorited.")
@@ -43,7 +43,7 @@ struct BeerRowView: View {
             return Text("\(beer.beerName), rating: \(beer.rating).")
         }
     }
-    
+
     var body: some View {
         NavigationLink(destination: EditBeerView(beer: beer)) {
             Label {

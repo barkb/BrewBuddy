@@ -10,9 +10,8 @@ import SwiftUI
 struct ListView: View {
     let title: LocalizedStringKey
     let beers: FetchedResults<Beer>.SubSequence
-    
-    var body: some View {
 
+    var body: some View {
         if beers.isEmpty {
             EmptyView()
         } else {
@@ -41,15 +40,14 @@ struct ListView: View {
                     .background(Color.secondarySystemGroupedBackground)
                     .cornerRadius(10)
                     .shadow(color: Color.black.opacity(0.2), radius: 5)
-                    
                 }
             }
         }
     }
 }
 
-//struct ListView_Previews: PreviewProvider {
+// struct ListView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ListView()
 //    }
-//}
+// }

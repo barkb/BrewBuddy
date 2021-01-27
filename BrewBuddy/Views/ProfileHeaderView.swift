@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ProfileHeaderView: View {
     @ObservedObject var profile: Profile
-    
+
     var body: some View {
-        HStack{
+        HStack {
             Text(profile.profileTitle)
                 .foregroundColor(Color(profile.profileColor))
             Spacer()

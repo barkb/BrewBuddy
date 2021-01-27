@@ -16,7 +16,7 @@ struct ProfileSummaryView: View {
                 .foregroundColor(.secondary)
             Text(profile.profileTitle)
                 .font(.title2)
-        } //Inner VStack
+        } // Inner VStack
         .padding()
         .background(Color.secondarySystemGroupedBackground)
         .cornerRadius(10)
