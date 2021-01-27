@@ -19,6 +19,12 @@ struct HomeView: View {
     
     init() {
         let request: NSFetchRequest<Beer> = Beer.fetchRequest()
+        let favoritedPredicate = NSPredicate(format: "favorited = true")
+        let ratingPredicate = NSPredicate(format: "rating >= 4")
+        let activePredicate = NSPredicate(format: "profile.isActive = true")
+        let compoundPredicate = NSCompoundPredicate(type: .and, subpredicates: [activePredicate, favoritedPredicate, ratingPredicate])
+        
+        request.predicate = compoundPredicate
         request.sortDescriptors = [
             NSSortDescriptor(keyPath: \Beer.rating, ascending: false)
         ]
@@ -47,13 +53,16 @@ struct HomeView: View {
             } //Topmost ScrollView
             .background(Color.systemGroupedBackground.ignoresSafeArea())
             .navigationTitle("Home")
+            .toolbar {
+                Button("Add Data") {
+                    dataController.deleteAll()
+                    try? dataController.createSampleData()
+                }
+            }
         } //NavigationView
     } //body
 } //end View
 
-//Button("Add Data") {
-//    dataController.deleteAll()
-//    try? dataController.createSampleData()
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
