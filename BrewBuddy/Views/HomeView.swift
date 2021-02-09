@@ -25,6 +25,8 @@ struct HomeView: View {
     }
 
     init() {
+        // Constructing a fetch request to show the 10 highest-rated, and favorite
+        // beers from open profiles.
         let request: NSFetchRequest<Beer> = Beer.fetchRequest()
         let favoritedPredicate = NSPredicate(format: "favorited = true")
         let ratingPredicate = NSPredicate(format: "rating >= 4")

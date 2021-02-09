@@ -59,6 +59,11 @@ struct ProfilesView: View {
             // Might delete later, depending on what is done with profiles
             if showActiveProfiles == true {
                 Button(action: addProfile) {
+                    // in iOS 14.3 VoiceOver has a bug that reads the label "Add Profile"
+                    // as "Add" regardless of what accessibility label we give it due to
+                    // the "plus" systemImage. Therefore, when VoiceOver is running
+                    // we use a text view as the button instead so VoiceOver reads it
+                    // correctly.
                     if UIAccessibility.isVoiceOverRunning {
                         Text("Add Profile")
                     } else {
