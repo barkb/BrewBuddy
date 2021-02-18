@@ -135,25 +135,16 @@
 		C44ACC7A258E968000759BBB /* BrewBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				C41BFC9E259A83C100D9D26C /* Views */,
-				C480AF0325BB5C2D00BB8EDC /* Localizable.stringsdict */,
-				C480AEFE25BB572F00BB8EDC /* Localizable.strings */,
-				C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */,
 				C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */,
-				C44ACC8B258E9E7700759BBB /* Main.xcdatamodeld */,
-				C480AF0925BB5D1C00BB8EDC /* Awards.json */,
+				C462497925DEEFA100C2A102 /* Models */,
+				C41BFC9E259A83C100D9D26C /* Views */,
+				C462497B25DEEFCA00C2A102 /* Controllers */,
+				C462497C25DEEFFF00C2A102 /* Extensions */,
+				C462497D25DEF03D00C2A102 /* Localization */,
+				C462497E25DEF05600C2A102 /* Configuration */,
 				C44ACC7F258E968200759BBB /* Assets.xcassets */,
 				C43D44C025A683F600E8F75A /* Colors.xcassets */,
-				C44ACC84258E968200759BBB /* Info.plist */,
 				C44ACC81258E968200759BBB /* Preview Content */,
-				C493EBC525B22C1F009D32AF /* Award.swift */,
-				C41BFC8E259A711400D9D26C /* DataController.swift */,
-				C43D44A725A3B55100E8F75A /* Beer-CoreDataHelpers.swift */,
-				C43D44AA25A3B71400E8F75A /* Profile-CoreDataHelpers.swift */,
-				C43D44BA25A676C000E8F75A /* Binding-OnChange.swift */,
-				C43A7A8B25ABC474001218C3 /* Sequence-Sorting.swift */,
-				C43A7A9125AD2849001218C3 /* Bundle-Decodable.swift */,
-				C404DF3B25B244560071BF94 /* Color-Additions.swift */,
 			);
 			path = BrewBuddy;
 			sourceTree = "<group>";
@@ -164,6 +155,55 @@
 				C44ACC82258E968200759BBB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C462497925DEEFA100C2A102 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C43D44A725A3B55100E8F75A /* Beer-CoreDataHelpers.swift */,
+				C43D44AA25A3B71400E8F75A /* Profile-CoreDataHelpers.swift */,
+				C493EBC525B22C1F009D32AF /* Award.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C462497B25DEEFCA00C2A102 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C41BFC8E259A711400D9D26C /* DataController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C462497C25DEEFFF00C2A102 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C43A7A8B25ABC474001218C3 /* Sequence-Sorting.swift */,
+				C43D44BA25A676C000E8F75A /* Binding-OnChange.swift */,
+				C43A7A9125AD2849001218C3 /* Bundle-Decodable.swift */,
+				C404DF3B25B244560071BF94 /* Color-Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C462497D25DEF03D00C2A102 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C480AF0325BB5C2D00BB8EDC /* Localizable.stringsdict */,
+				C480AEFE25BB572F00BB8EDC /* Localizable.strings */,
+				C480AF0925BB5D1C00BB8EDC /* Awards.json */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C462497E25DEF05600C2A102 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C44ACC8B258E9E7700759BBB /* Main.xcdatamodeld */,
+				C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */,
+				C44ACC84258E968200759BBB /* Info.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +234,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					C44ACC77258E968000759BBB = {
 						CreatedOnToolsVersion = 12.3;
@@ -324,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -385,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -441,12 +483,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BrewBuddy/BrewBuddy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BrewBuddy/Configuration/BrewBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BrewBuddy/Preview Content\"";
 				DEVELOPMENT_TEAM = QF8DE633U6;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BrewBuddy/Info.plist;
+				INFOPLIST_FILE = BrewBuddy/Configuration/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,12 +506,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = BrewBuddy/BrewBuddy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BrewBuddy/Configuration/BrewBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BrewBuddy/Preview Content\"";
 				DEVELOPMENT_TEAM = QF8DE633U6;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BrewBuddy/Info.plist;
+				INFOPLIST_FILE = BrewBuddy/Configuration/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

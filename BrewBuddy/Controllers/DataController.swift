@@ -16,7 +16,6 @@ class DataController: ObservableObject {
     /// The lone CloudKit container used to store all our data.
     let container: NSPersistentCloudKitContainer
 
-
     /// Creates a data controller instance with a container either in-memory (for testing
     /// purposes) or on permanent storage (for normal app use). Defaults to permanent
     /// storage.
@@ -48,7 +47,6 @@ class DataController: ObservableObject {
         }
         return dataController
     }()
-
 
     /// Creates example profiles and beers to make manual testing easier.
     /// - Throws: An NSError sent from calling save() on the NSManagedObjectContext.
