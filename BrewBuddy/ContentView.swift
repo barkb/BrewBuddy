@@ -17,14 +17,14 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            ProfilesView(showActiveProfiles: true)
-                .tag(ProfilesView.openTag)
+            PlaylistsView(showActivePlaylists: true)
+                .tag(PlaylistsView.openTag)
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Open")
                 }
-            ProfilesView(showActiveProfiles: false)
-                .tag(ProfilesView.closedTag)
+            PlaylistsView(showActivePlaylists: false)
+                .tag(PlaylistsView.closedTag)
                 .tabItem {
                     Image(systemName: "checkmark")
                     Text("Closed")

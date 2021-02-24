@@ -48,23 +48,23 @@ class DataController: ObservableObject {
         return dataController
     }()
 
-    /// Creates example profiles and beers to make manual testing easier.
+    /// Creates example playlists and beers to make manual testing easier.
     /// - Throws: An NSError sent from calling save() on the NSManagedObjectContext.
     func createSampleData() throws {
         let viewContext = container.viewContext
 
-        for profileCounter in 1...5 {
-            let profile = Profile(context: viewContext)
-            profile.title = "Profile \(profileCounter)"
-            profile.beers = []
-            profile.creationDate = Date().addingTimeInterval(TimeInterval(Int.random(in: 1...10000)))
-            profile.isActive = Bool.random()
+        for playlistCounter in 1...5 {
+            let playlist = Playlist(context: viewContext)
+            playlist.title = "Playlist \(playlistCounter)"
+            playlist.beers = []
+            playlist.creationDate = Date().addingTimeInterval(TimeInterval(Int.random(in: 1...10000)))
+            playlist.isActive = Bool.random()
 
             for beerCounter in 1...10 {
                 let beer = Beer(context: viewContext)
                 beer.name = "Beer \(beerCounter)"
                 beer.creationDate = Date()
-                beer.profile = profile
+                beer.playlist = playlist
                 beer.rating = Int16.random(in: 1...5)
                 beer.favorited = Bool.random()
             }
@@ -74,14 +74,14 @@ class DataController: ObservableObject {
     }
 
     /// Saves data if there are changes, ignores any errors caused by saving, but
-    /// shouldn't cause any problems because attributes are optionaln 
+    /// shouldn't cause any problems because attributes are optional
     func save() {
         if container.viewContext.hasChanges {
             try? container.viewContext.save()
         }
     }
 
-    // Delete for deleting specific objects (beer or profile) for testing
+    // Delete for deleting specific objects (beer or playlist) for testing
     func delete(_ object: NSManagedObject) {
         container.viewContext.delete(object)
     }
@@ -92,7 +92,7 @@ class DataController: ObservableObject {
         let batchDeleteRequest1 = NSBatchDeleteRequest(fetchRequest: fetchRequest1)
         _ = try? container.viewContext.execute(batchDeleteRequest1)
 
-        let fetchRequest2: NSFetchRequest<NSFetchRequestResult> = Profile.fetchRequest()
+        let fetchRequest2: NSFetchRequest<NSFetchRequestResult> = Playlist.fetchRequest()
         let batchDeleteRequest2 = NSBatchDeleteRequest(fetchRequest: fetchRequest2)
         _ = try? container.viewContext.execute(batchDeleteRequest2)
     }

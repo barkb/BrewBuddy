@@ -11,26 +11,26 @@ struct HomeView: View {
     static let tag: String? = "Home"
     @EnvironmentObject var dataController: DataController
     @FetchRequest(
-        entity: Profile.entity(),
+        entity: Playlist.entity(),
         sortDescriptors: [NSSortDescriptor(
-                            keyPath: \Profile.title,
+                            keyPath: \Playlist.title,
                             ascending: true)
         ],
         predicate: NSPredicate(format: "isActive = true")
-    ) var profiles: FetchedResults<Profile>
+    ) var playlists: FetchedResults<Playlist>
     let beers: FetchRequest<Beer>
 
-    var profileRows: [GridItem] {
+    var playlistRows: [GridItem] {
         [GridItem(.fixed(100))]
     }
 
     init() {
         // Constructing a fetch request to show the 10 highest-rated, and favorite
-        // beers from open profiles.
+        // beers from open playlists.
         let request: NSFetchRequest<Beer> = Beer.fetchRequest()
         let favoritedPredicate = NSPredicate(format: "favorited = true")
         let ratingPredicate = NSPredicate(format: "rating >= 4")
-        let activePredicate = NSPredicate(format: "profile.isActive = true")
+        let activePredicate = NSPredicate(format: "playlist.isActive = true")
         let compoundPredicate = NSCompoundPredicate(
             type: .and,
             subpredicates: [
@@ -53,11 +53,13 @@ struct HomeView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         // This would be a spot to look into adding "categories" such as top
                         // rated, favorite brewery, and the like
-                        LazyHGrid(rows: profileRows) {
-                            ForEach(profiles, content: ProfileSummaryView.init)
-                        } // LazyHGrid
-                        .padding([.horizontal, .top])
-                        .fixedSize(horizontal: false, vertical: true)
+//                        LazyHGrid(rows: playlistRows) {
+//                            ForEach(playlists) { playlist in
+//                                PlaylistSummaryView(playlist: playlist)
+//                            }
+//                        } // LazyHGrid
+//                        .padding([.horizontal, .top])
+//                        .fixedSize(horizontal: false, vertical: true)
                     } // Inner ScrollView
                     VStack(alignment: .leading) {
                         ListView(title: "Top Rated", beers: beers.wrappedValue.prefix(3))

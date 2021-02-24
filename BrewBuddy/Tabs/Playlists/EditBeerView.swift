@@ -73,7 +73,7 @@ struct EditBeerView: View {
     }
 
     func update() {
-        beer.profile?.objectWillChange.send()
+        beer.playlist?.objectWillChange.send()
 
         beer.name = name
         beer.detail = detail

@@ -23,7 +23,7 @@ struct ListView: View {
                 NavigationLink(destination: EditBeerView(beer: beer)) {
                     HStack(spacing: 20) {
                         Circle()
-                            .stroke(Color(beer.profile?.profileTitle ?? "Light Blue"), lineWidth: 3)
+                            .stroke(Color(beer.playlist?.playlistTitle ?? "Light Blue"), lineWidth: 3)
                             .frame(width: 44, height: 44)
                         VStack(alignment: .leading) {
                             Text(beer.beerName)

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BeerRowView: View {
-    @ObservedObject var profile: Profile
+    @ObservedObject var playlist: Playlist
     @ObservedObject var beer: Beer
 
     var icon: some View {
@@ -17,19 +17,19 @@ struct BeerRowView: View {
                 .foregroundColor(Color("Gold"))
         } else if beer.rating == 5 {
             return Image(systemName: "die.face.5")
-                .foregroundColor(Color(profile.profileColor))
+                .foregroundColor(Color(playlist.playlistColor))
         } else if beer.rating == 4 {
             return Image(systemName: "die.face.4")
-                .foregroundColor(Color(profile.profileColor))
+                .foregroundColor(Color(playlist.playlistColor))
         } else if beer.rating == 3 {
             return Image(systemName: "die.face.3")
-                .foregroundColor(Color(profile.profileColor))
+                .foregroundColor(Color(playlist.playlistColor))
         } else if beer.rating == 2 {
             return Image(systemName: "die.face.2")
-                .foregroundColor(Color(profile.profileColor))
+                .foregroundColor(Color(playlist.playlistColor))
         } else if beer.rating == 1 {
             return Image(systemName: "die.face.1")
-                .foregroundColor(Color(profile.profileColor))
+                .foregroundColor(Color(playlist.playlistColor))
         } else {
             return Image(systemName: "star.fill")
                 .foregroundColor(.clear)
@@ -58,6 +58,6 @@ struct BeerRowView: View {
 
 struct BeerRowView_Previews: PreviewProvider {
     static var previews: some View {
-        BeerRowView(profile: Profile.example, beer: Beer.example)
+        BeerRowView(playlist: Playlist.example, beer: Beer.example)
     }
 }

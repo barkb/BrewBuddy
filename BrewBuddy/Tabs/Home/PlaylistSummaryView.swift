@@ -1,5 +1,5 @@
 //
-//  ProfileSummaryView.swift
+//  PlaylistSummaryView.swift
 //  BrewBuddy
 //
 //  Created by Ben Barkett on 1/24/21.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ProfileSummaryView: View {
-    @ObservedObject var profile: Profile
+struct PlaylistSummaryView: View {
+    @ObservedObject var playlist: Playlist
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(profile.profileBeers.count) beers")
+            Text("\(playlist.playlistBeers.count) beers")
                 .font(.caption)
                 .foregroundColor(.secondary)
-            Text(profile.profileTitle)
+            Text(playlist.playlistTitle)
                 .font(.title2)
         } // Inner VStack
         .padding()
@@ -22,12 +22,12 @@ struct ProfileSummaryView: View {
         .cornerRadius(10)
         .shadow(color: Color.black.opacity(0.2), radius: 5)
         .accessibilityElement(children: .ignore)
-        accessibilityLabel(profile.label)
+        accessibilityLabel(playlist.label)
     }
 }
 
-struct ProfileSummaryView_Previews: PreviewProvider {
+struct PlaylistSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileSummaryView(profile: Profile.example)
+        PlaylistSummaryView(playlist: Playlist.example)
     }
 }

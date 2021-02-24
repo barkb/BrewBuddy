@@ -1,5 +1,5 @@
 //
-//  EditProfileView.swift
+//  EditPlaylistView.swift
 //  BrewBuddy
 //
 //  Created by Ben Barkett on 1/6/21.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct EditProfileView: View {
-    let profile: Profile
+struct EditPlaylistView: View {
+    let playlist: Playlist
 
     @EnvironmentObject var dataController: DataController
     @Environment(\.presentationMode) var presentationMode
@@ -22,44 +22,44 @@ struct EditProfileView: View {
         GridItem(.adaptive(minimum: 44))
     ]
 
-    init(profile: Profile) {
-        self.profile = profile
-        _title = State(wrappedValue: profile.profileTitle)
-        _detail = State(wrappedValue: profile.profileDetail)
-        _color = State(wrappedValue: profile.profileColor)
+    init(playlist: Playlist) {
+        self.playlist = playlist
+        _title = State(wrappedValue: playlist.playlistTitle)
+        _detail = State(wrappedValue: playlist.playlistDetail)
+        _color = State(wrappedValue: playlist.playlistColor)
     }
 
     var body: some View {
         Form {
             Section(header: Text("Basic Settings")) {
                 // Bug exists where screen pops back up one navView on every key press
-                TextField("Profile Name", text: $title.onChange(update))
-                TextField("Profile Description", text: $detail.onChange(update))
+                TextField("Playlist Name", text: $title.onChange(update))
+                TextField("Playlist Description", text: $detail.onChange(update))
             } // Section 1
-            Section(header: Text("Custom profile color")) {
+            Section(header: Text("Custom playlist color")) {
                 LazyVGrid(columns: colorColumns) {
-                    ForEach(Profile.colors, id: \.self, content: colorButton)
+                    ForEach(Playlist.colors, id: \.self, content: colorButton)
                 }
                 .padding(.vertical)
             } // Section 2
             // swiftlint:disable:next line_length
-            Section(footer: Text("Closing a profile moves it from the Open to Closed tab; deleting it removes the profile entirely.")) {
-                Button(profile.isActive ? "Close this profile" : "Reopen this profile") {
-                    profile.isActive.toggle()
+            Section(footer: Text("Closing a playlist moves it from the Open to Closed tab; deleting it removes the playlist entirely.")) {
+                Button(playlist.isActive ? "Close this playlist" : "Reopen this playlist") {
+                    playlist.isActive.toggle()
                     update()
                 } // Close Button
-                Button("Delete this profile") {
+                Button("Delete this playlist") {
                     showingDeleteConfirm.toggle()
                 }
                 .accentColor(.red)
             }
         } // Form
-        .navigationTitle("Edit Profile")
+        .navigationTitle("Edit Playlist")
         .onDisappear(perform: dataController.save)
         .alert(isPresented: $showingDeleteConfirm) {
             Alert(
-                title: Text("Delete Profile?"),
-                message: Text("Are you sure you want to delete this profile? You will also delete all the beers it contains."), // swiftlint:disable:this line_length
+                title: Text("Delete Playlist?"),
+                message: Text("Are you sure you want to delete this playlist? You will also delete all the beers it contains."), // swiftlint:disable:this line_length
                 primaryButton: .default(Text("Delete"), action: delete),
                 secondaryButton: .cancel()
             )
@@ -67,14 +67,14 @@ struct EditProfileView: View {
     }
 
     func update() {
-        // profile.objectWillChange.send()
-        profile.title = title
-        profile.detail = detail
-        profile.color = color
+        // playlist.objectWillChange.send()
+        playlist.title = title
+        playlist.detail = detail
+        playlist.color = color
     }
 
     func delete() {
-        dataController.delete(profile)
+        dataController.delete(playlist)
         presentationMode.wrappedValue.dismiss()
     }
 
@@ -103,8 +103,8 @@ struct EditProfileView: View {
     }
 }
 
-struct EditProfileView_Previews: PreviewProvider {
+struct EditPlaylistView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfileView(profile: Profile.example)
+        EditPlaylistView(playlist: Playlist.example)
     }
 }

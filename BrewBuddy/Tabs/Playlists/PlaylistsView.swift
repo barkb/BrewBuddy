@@ -1,5 +1,5 @@
 //
-//  ProfilesView.swift
+//  PlaylistsView.swift
 //  BrewBuddy
 //
 //  Created by Ben Barkett on 12/29/20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfilesView: View {
+struct PlaylistsView: View {
     @EnvironmentObject var dataController: DataController
     @Environment(\.managedObjectContext) var managedObjectContext
 
@@ -16,61 +16,61 @@ struct ProfilesView: View {
 
     static let openTag: String? = "Open"
     static let closedTag: String? = "Closed"
-    let showActiveProfiles: Bool
-    let profiles: FetchRequest<Profile>
+    let showActivePlaylists: Bool
+    let playlists: FetchRequest<Playlist>
 
-    init(showActiveProfiles: Bool) {
-        self.showActiveProfiles = showActiveProfiles
-        profiles = FetchRequest<Profile>(
-            entity: Profile.entity(),
+    init(showActivePlaylists: Bool) {
+        self.showActivePlaylists = showActivePlaylists
+        playlists = FetchRequest<Playlist>(
+            entity: Playlist.entity(),
             sortDescriptors: [NSSortDescriptor(
-                                keyPath: \Profile.creationDate,
+                                keyPath: \Playlist.creationDate,
                                 ascending: false)],
             predicate: NSPredicate(format: "isActive = %d")
         )
     }
 
-    var profilesList: some View {
+    var playlistsList: some View {
         List {
-            ForEach(profiles.wrappedValue) { profile in
-                Section(header: ProfileHeaderView(profile: profile)) {
-                    ForEach(profile.sortedProfileBeers(using: sortOrder)) { beer in
-                        BeerRowView(profile: profile, beer: beer)
+            ForEach(playlists.wrappedValue) { playlist in
+                Section(header: PlaylistHeaderView(playlist: playlist)) {
+                    ForEach(playlist.sortedPlaylistBeers(using: sortOrder)) { beer in
+                        BeerRowView(playlist: playlist, beer: beer)
                     } // inner ForEach
                     .onDelete { offsets in
-                        delete(offsets, from: profile)
+                        delete(offsets, from: playlist)
                     } // onDelete
-                    if showActiveProfiles {
+                    if showActivePlaylists {
                         Button {
-                            addBeer(to: profile)
+                            addBeer(to: playlist)
                         } label: {
                             Label("Add New Beer", systemImage: "plus")
                         } // Button
-                    } // showActiveProfiles If
+                    } // showActivePlaylists If
                 } // Section
             } // Outer ForEach
         } // List
         .listStyle(InsetGroupedListStyle())
-    } // profilesList
+    } // playlistsList
 
-    var addProfileToolbarItem: some ToolbarContent {
+    var addPlaylistToolbarItem: some ToolbarContent {
         ToolbarItem(placement: .navigationBarTrailing) {
-            // Need to debug later, new profile not sliding in??
-            // Might delete later, depending on what is done with profiles
-            if showActiveProfiles == true {
-                Button(action: addProfile) {
-                    // in iOS 14.3 VoiceOver has a bug that reads the label "Add Profile"
+            // Need to debug later, new playlist not sliding in??
+            // Might delete later, depending on what is done with playlists
+            if showActivePlaylists == true {
+                Button(action: addPlaylist) {
+                    // in iOS 14.3 VoiceOver has a bug that reads the label "Add Playlist"
                     // as "Add" regardless of what accessibility label we give it due to
                     // the "plus" systemImage. Therefore, when VoiceOver is running
                     // we use a text view as the button instead so VoiceOver reads it
                     // correctly.
                     if UIAccessibility.isVoiceOverRunning {
-                        Text("Add Profile")
+                        Text("Add Playlist")
                     } else {
-                        Label("Add Profile", systemImage: "plus")
+                        Label("Add Playlist", systemImage: "plus")
                     }
                 } // button
-            } // if showActiveProfiles
+            } // if showActivePlaylists
         } // ToolbarItem
     }
 
@@ -87,16 +87,16 @@ struct ProfilesView: View {
     var body: some View {
         NavigationView {
             Group {
-                if profiles.wrappedValue.isEmpty {
+                if playlists.wrappedValue.isEmpty {
                     Text("There's nothing here right now")
                         .foregroundColor(.secondary)
                 } else {
-                    profilesList
+                    playlistsList
                 } // end If
             } // Group
-            .navigationTitle(showActiveProfiles ? "Open Profiles" : "Closed Profiles")
+            .navigationTitle(showActivePlaylists ? "Open Playlists" : "Closed Playlists")
             .toolbar {
-                addProfileToolbarItem
+                addPlaylistToolbarItem
                 sortOrderToolbarItem
             } // toolbar
             .actionSheet(isPresented: $showingSortOrder) {
@@ -112,26 +112,26 @@ struct ProfilesView: View {
         } // NavigationView
     } // body view
 
-    func addBeer(to profile: Profile) {
+    func addBeer(to playlist: Playlist) {
         withAnimation {
             let beer = Beer(context: managedObjectContext)
-            beer.profile = profile
+            beer.playlist = playlist
             beer.creationDate = Date()
             dataController.save()
         }
     }
 
-    func addProfile() {
+    func addPlaylist() {
         withAnimation {
-            let profile = Profile(context: managedObjectContext)
-            profile.isActive = true
-            profile.creationDate = Date()
+            let playlist = Playlist(context: managedObjectContext)
+            playlist.isActive = true
+            playlist.creationDate = Date()
             dataController.save()
         }
     }
 
-    func delete(_ offsets: IndexSet, from profile: Profile) {
-        let allBeers = profile.sortedProfileBeers(using: sortOrder)
+    func delete(_ offsets: IndexSet, from playlist: Playlist) {
+        let allBeers = playlist.sortedPlaylistBeers(using: sortOrder)
         // not deleting properly, look at later
         for offset in offsets {
             let beer = allBeers[offset]
@@ -139,12 +139,12 @@ struct ProfilesView: View {
             dataController.save()
         }
     }
-} // ProfilesView
+} // PlaylistsView
 
-struct ProfilesView_Previews: PreviewProvider {
+struct PlaylistsView_Previews: PreviewProvider {
     static var dataController = DataController.preview
     static var previews: some View {
-        ProfilesView(showActiveProfiles: true)
+        PlaylistsView(showActivePlaylists: true)
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
     }

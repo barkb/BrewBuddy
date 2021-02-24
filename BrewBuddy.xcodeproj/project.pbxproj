@@ -9,21 +9,20 @@
 /* Begin PBXBuildFile section */
 		C404DF3C25B244560071BF94 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404DF3B25B244560071BF94 /* Color-Additions.swift */; };
 		C41BFC8F259A711400D9D26C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC8E259A711400D9D26C /* DataController.swift */; };
-		C41BFC95259A80BB00D9D26C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41BFC94259A80BB00D9D26C /* CloudKit.framework */; };
 		C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC97259A82EE00D9D26C /* HomeView.swift */; };
-		C41BFCA5259BC1DA00D9D26C /* ProfilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFCA4259BC1DA00D9D26C /* ProfilesView.swift */; };
+		C41BFCA5259BC1DA00D9D26C /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFCA4259BC1DA00D9D26C /* PlaylistsView.swift */; };
 		C43A7A8C25ABC474001218C3 /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A7A8B25ABC474001218C3 /* Sequence-Sorting.swift */; };
 		C43A7A8F25AD1FB1001218C3 /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A7A8E25AD1FB1001218C3 /* SelectSomethingView.swift */; };
 		C43A7A9225AD2849001218C3 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A7A9125AD2849001218C3 /* Bundle-Decodable.swift */; };
 		C43D44A825A3B55100E8F75A /* Beer-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44A725A3B55100E8F75A /* Beer-CoreDataHelpers.swift */; };
-		C43D44AB25A3B71400E8F75A /* Profile-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44AA25A3B71400E8F75A /* Profile-CoreDataHelpers.swift */; };
+		C43D44AB25A3B71400E8F75A /* Playlist-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44AA25A3B71400E8F75A /* Playlist-CoreDataHelpers.swift */; };
 		C43D44B225A56AD200E8F75A /* EditBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44B125A56AD200E8F75A /* EditBeerView.swift */; };
 		C43D44B525A5700C00E8F75A /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44B425A5700C00E8F75A /* RatingView.swift */; };
 		C43D44B825A66EB900E8F75A /* BeerRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44B725A66EB900E8F75A /* BeerRowView.swift */; };
 		C43D44BB25A676C000E8F75A /* Binding-OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44BA25A676C000E8F75A /* Binding-OnChange.swift */; };
-		C43D44BE25A67FEB00E8F75A /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44BD25A67FEB00E8F75A /* ProfileHeaderView.swift */; };
+		C43D44BE25A67FEB00E8F75A /* PlaylistHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44BD25A67FEB00E8F75A /* PlaylistHeaderView.swift */; };
 		C43D44C125A683F600E8F75A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C43D44C025A683F600E8F75A /* Colors.xcassets */; };
-		C43D44C425A6AD3C00E8F75A /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44C325A6AD3C00E8F75A /* EditProfileView.swift */; };
+		C43D44C425A6AD3C00E8F75A /* EditPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43D44C325A6AD3C00E8F75A /* EditPlaylistView.swift */; };
 		C44ACC7C258E968000759BBB /* BrewBuddyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */; };
 		C44ACC7E258E968000759BBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44ACC7D258E968000759BBB /* ContentView.swift */; };
 		C44ACC80258E968200759BBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44ACC7F258E968200759BBB /* Assets.xcassets */; };
@@ -33,7 +32,8 @@
 		C480AF0125BB5C2D00BB8EDC /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = C480AF0325BB5C2D00BB8EDC /* Localizable.stringsdict */; };
 		C480AF0725BB5D1C00BB8EDC /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = C480AF0925BB5D1C00BB8EDC /* Awards.json */; };
 		C480AF0E25BE3E7900BB8EDC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C480AF0D25BE3E7900BB8EDC /* ListView.swift */; };
-		C480AF1125BE400D00BB8EDC /* ProfileSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C480AF1025BE400D00BB8EDC /* ProfileSummaryView.swift */; };
+		C480AF1125BE400D00BB8EDC /* PlaylistSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C480AF1025BE400D00BB8EDC /* PlaylistSummaryView.swift */; };
+		C491A0CE25E4334200A14038 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41BFC94259A80BB00D9D26C /* CloudKit.framework */; };
 		C493EBC625B22C1F009D32AF /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC525B22C1F009D32AF /* Award.swift */; };
 		C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC825B22CBE009D32AF /* AwardsView.swift */; };
 /* End PBXBuildFile section */
@@ -44,19 +44,19 @@
 		C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrewBuddy.entitlements; sourceTree = "<group>"; };
 		C41BFC94259A80BB00D9D26C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		C41BFC97259A82EE00D9D26C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		C41BFCA4259BC1DA00D9D26C /* ProfilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesView.swift; sourceTree = "<group>"; };
+		C41BFCA4259BC1DA00D9D26C /* PlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsView.swift; sourceTree = "<group>"; };
 		C43A7A8B25ABC474001218C3 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
 		C43A7A8E25AD1FB1001218C3 /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		C43A7A9125AD2849001218C3 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		C43D44A725A3B55100E8F75A /* Beer-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Beer-CoreDataHelpers.swift"; sourceTree = "<group>"; };
-		C43D44AA25A3B71400E8F75A /* Profile-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile-CoreDataHelpers.swift"; sourceTree = "<group>"; };
+		C43D44AA25A3B71400E8F75A /* Playlist-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playlist-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		C43D44B125A56AD200E8F75A /* EditBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBeerView.swift; sourceTree = "<group>"; };
 		C43D44B425A5700C00E8F75A /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		C43D44B725A66EB900E8F75A /* BeerRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRowView.swift; sourceTree = "<group>"; };
 		C43D44BA25A676C000E8F75A /* Binding-OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding-OnChange.swift"; sourceTree = "<group>"; };
-		C43D44BD25A67FEB00E8F75A /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		C43D44BD25A67FEB00E8F75A /* PlaylistHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistHeaderView.swift; sourceTree = "<group>"; };
 		C43D44C025A683F600E8F75A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		C43D44C325A6AD3C00E8F75A /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		C43D44C325A6AD3C00E8F75A /* EditPlaylistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlaylistView.swift; sourceTree = "<group>"; };
 		C44ACC78258E968000759BBB /* BrewBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewBuddyApp.swift; sourceTree = "<group>"; };
 		C44ACC7D258E968000759BBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		C480AF0825BB5D1C00BB8EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
 		C480AF0B25BB5D2000BB8EDC /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = hu; path = hu.lproj/Awards.json; sourceTree = "<group>"; };
 		C480AF0D25BE3E7900BB8EDC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		C480AF1025BE400D00BB8EDC /* ProfileSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummaryView.swift; sourceTree = "<group>"; };
+		C480AF1025BE400D00BB8EDC /* PlaylistSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistSummaryView.swift; sourceTree = "<group>"; };
 		C493EBC525B22C1F009D32AF /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		C493EBC825B22CBE009D32AF /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C41BFC95259A80BB00D9D26C /* CloudKit.framework in Frameworks */,
+				C491A0CE25E4334200A14038 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,25 +94,6 @@
 				C41BFC94259A80BB00D9D26C /* CloudKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C41BFC9E259A83C100D9D26C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C44ACC7D258E968000759BBB /* ContentView.swift */,
-				C41BFC97259A82EE00D9D26C /* HomeView.swift */,
-				C480AF1025BE400D00BB8EDC /* ProfileSummaryView.swift */,
-				C480AF0D25BE3E7900BB8EDC /* ListView.swift */,
-				C41BFCA4259BC1DA00D9D26C /* ProfilesView.swift */,
-				C493EBC825B22CBE009D32AF /* AwardsView.swift */,
-				C43D44B125A56AD200E8F75A /* EditBeerView.swift */,
-				C43D44C325A6AD3C00E8F75A /* EditProfileView.swift */,
-				C43D44B425A5700C00E8F75A /* RatingView.swift */,
-				C43D44B725A66EB900E8F75A /* BeerRowView.swift */,
-				C43D44BD25A67FEB00E8F75A /* ProfileHeaderView.swift */,
-				C43A7A8E25AD1FB1001218C3 /* SelectSomethingView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		C44ACC6F258E968000759BBB = {
@@ -135,9 +116,9 @@
 		C44ACC7A258E968000759BBB /* BrewBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				C462498325DEF2A000C2A102 /* Tabs */,
 				C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */,
-				C462497925DEEFA100C2A102 /* Models */,
-				C41BFC9E259A83C100D9D26C /* Views */,
+				C44ACC7D258E968000759BBB /* ContentView.swift */,
 				C462497B25DEEFCA00C2A102 /* Controllers */,
 				C462497C25DEEFFF00C2A102 /* Extensions */,
 				C462497D25DEF03D00C2A102 /* Localization */,
@@ -161,8 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				C43D44A725A3B55100E8F75A /* Beer-CoreDataHelpers.swift */,
-				C43D44AA25A3B71400E8F75A /* Profile-CoreDataHelpers.swift */,
-				C493EBC525B22C1F009D32AF /* Award.swift */,
+				C43D44AA25A3B71400E8F75A /* Playlist-CoreDataHelpers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +158,7 @@
 		C462497C25DEEFFF00C2A102 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C462497925DEEFA100C2A102 /* Models */,
 				C43A7A8B25ABC474001218C3 /* Sequence-Sorting.swift */,
 				C43D44BA25A676C000E8F75A /* Binding-OnChange.swift */,
 				C43A7A9125AD2849001218C3 /* Bundle-Decodable.swift */,
@@ -191,7 +172,6 @@
 			children = (
 				C480AF0325BB5C2D00BB8EDC /* Localizable.stringsdict */,
 				C480AEFE25BB572F00BB8EDC /* Localizable.strings */,
-				C480AF0925BB5D1C00BB8EDC /* Awards.json */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -204,6 +184,50 @@
 				C44ACC84258E968200759BBB /* Info.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		C462498325DEF2A000C2A102 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				C462498425DEF2B000C2A102 /* Home */,
+				C462498525DEF2B500C2A102 /* Playlists */,
+				C462498625DEF2BC00C2A102 /* Awards */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		C462498425DEF2B000C2A102 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C41BFC97259A82EE00D9D26C /* HomeView.swift */,
+				C480AF0D25BE3E7900BB8EDC /* ListView.swift */,
+				C480AF1025BE400D00BB8EDC /* PlaylistSummaryView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C462498525DEF2B500C2A102 /* Playlists */ = {
+			isa = PBXGroup;
+			children = (
+				C41BFCA4259BC1DA00D9D26C /* PlaylistsView.swift */,
+				C43A7A8E25AD1FB1001218C3 /* SelectSomethingView.swift */,
+				C43D44BD25A67FEB00E8F75A /* PlaylistHeaderView.swift */,
+				C43D44C325A6AD3C00E8F75A /* EditPlaylistView.swift */,
+				C43D44B725A66EB900E8F75A /* BeerRowView.swift */,
+				C43D44B125A56AD200E8F75A /* EditBeerView.swift */,
+				C43D44B425A5700C00E8F75A /* RatingView.swift */,
+			);
+			path = Playlists;
+			sourceTree = "<group>";
+		};
+		C462498625DEF2BC00C2A102 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				C493EBC825B22CBE009D32AF /* AwardsView.swift */,
+				C493EBC525B22C1F009D32AF /* Award.swift */,
+				C480AF0925BB5D1C00BB8EDC /* Awards.json */,
+			);
+			path = Awards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,10 +326,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C43D44C425A6AD3C00E8F75A /* EditProfileView.swift in Sources */,
+				C43D44C425A6AD3C00E8F75A /* EditPlaylistView.swift in Sources */,
 				C493EBC625B22C1F009D32AF /* Award.swift in Sources */,
 				C43D44B825A66EB900E8F75A /* BeerRowView.swift in Sources */,
-				C480AF1125BE400D00BB8EDC /* ProfileSummaryView.swift in Sources */,
+				C480AF1125BE400D00BB8EDC /* PlaylistSummaryView.swift in Sources */,
 				C44ACC8D258E9E7700759BBB /* Main.xcdatamodeld in Sources */,
 				C43D44B225A56AD200E8F75A /* EditBeerView.swift in Sources */,
 				C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */,
@@ -315,14 +339,14 @@
 				C43A7A9225AD2849001218C3 /* Bundle-Decodable.swift in Sources */,
 				C43A7A8C25ABC474001218C3 /* Sequence-Sorting.swift in Sources */,
 				C43D44B525A5700C00E8F75A /* RatingView.swift in Sources */,
-				C43D44BE25A67FEB00E8F75A /* ProfileHeaderView.swift in Sources */,
+				C43D44BE25A67FEB00E8F75A /* PlaylistHeaderView.swift in Sources */,
 				C41BFC8F259A711400D9D26C /* DataController.swift in Sources */,
 				C44ACC7E258E968000759BBB /* ContentView.swift in Sources */,
-				C43D44AB25A3B71400E8F75A /* Profile-CoreDataHelpers.swift in Sources */,
+				C43D44AB25A3B71400E8F75A /* Playlist-CoreDataHelpers.swift in Sources */,
 				C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */,
 				C480AF0E25BE3E7900BB8EDC /* ListView.swift in Sources */,
 				C43A7A8F25AD1FB1001218C3 /* SelectSomethingView.swift in Sources */,
-				C41BFCA5259BC1DA00D9D26C /* ProfilesView.swift in Sources */,
+				C41BFCA5259BC1DA00D9D26C /* PlaylistsView.swift in Sources */,
 				C44ACC7C258E968000759BBB /* BrewBuddyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +509,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = BrewBuddy/Configuration/BrewBuddy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"BrewBuddy/Preview Content\"";
 				DEVELOPMENT_TEAM = QF8DE633U6;
 				ENABLE_PREVIEWS = YES;
