@@ -27,7 +27,7 @@ extension Beer {
         type ?? ""
     }
     static var example: Beer {
-        let controller = DataController(inMemory: true)
+        let controller = DataController.preview
         let viewContext = controller.container.viewContext
 
         let beer = Beer(context: viewContext)

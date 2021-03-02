@@ -67,13 +67,13 @@ extension Playlist {
     }
 
     static var example: Playlist {
-        let controller = DataController(inMemory: true)
+        let controller = DataController.preview
         let viewContext = controller.container.viewContext
 
         let playlist = Playlist(context: viewContext)
         playlist.title = "Example Playlist"
         playlist.detail = "This is an example playlist"
-        playlist.isActive = true
+        playlist.isActive = false
         playlist.creationDate = Date()
 
         return playlist

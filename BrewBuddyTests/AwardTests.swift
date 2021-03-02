@@ -27,11 +27,9 @@ class AwardTests: BaseTestCase {
         let values = [1, 10, 20, 50, 100, 250, 500, 1000]
 
         for (count, value) in values.enumerated() {
-            var beers = [Beer]()
 
             for _ in 0..<value {
-                let beer = Beer(context: managedObjectContext)
-                beers.append(beer)
+                _ = Beer(context: managedObjectContext)
             }
 
             let matches = awards.filter { award in
@@ -40,9 +38,7 @@ class AwardTests: BaseTestCase {
 
             XCTAssertEqual(matches.count, count+1, "Adding \(value) beers should unlock \(count+1) awards.")
 
-            for beer in beers {
-                dataController.delete(beer)
-            }
+            dataController.deleteAll()
         }
     }
 
@@ -50,12 +46,9 @@ class AwardTests: BaseTestCase {
         let values = [1, 10, 20, 50, 100, 250, 500, 1000]
 
         for (count, value) in values.enumerated() {
-            var beers = [Beer]()
-
             for _ in 0..<value {
                 let beer = Beer(context: managedObjectContext)
                 beer.favorited = true
-                beers.append(beer)
             }
 
             let matches = awards.filter { award in
@@ -64,9 +57,7 @@ class AwardTests: BaseTestCase {
 
             XCTAssertEqual(matches.count, count+1, "Favoriting \(value) beers should unlock \(count+1) awards.")
 
-            for beer in beers {
-                dataController.delete(beer)
-            }
+            dataController.deleteAll()
         }
     }
 }
