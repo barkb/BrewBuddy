@@ -19,7 +19,9 @@ class DevelopmentTests: BaseTestCase {
     func testDeleteAllWorks() throws {
         try dataController.createSampleData()
         dataController.deleteAll()
-        XCTAssertEqual(dataController.count(for: Playlist.fetchRequest()), 0, "There should be 0 playlists after deletion.")
+        XCTAssertEqual(dataController.count(
+                        for: Playlist.fetchRequest()), 0, "There should be 0 playlists after deletion."
+        )
         XCTAssertEqual(dataController.count(for: Beer.fetchRequest()), 0, "There should be 0 beers after deletion.")
     }
 

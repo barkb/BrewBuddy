@@ -41,6 +41,7 @@
 		C491A0D825E6176D00A14038 /* BrewBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C491A0D725E6176D00A14038 /* BrewBuddyTests.swift */; };
 		C493EBC625B22C1F009D32AF /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC525B22C1F009D32AF /* Award.swift */; };
 		C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC825B22CBE009D32AF /* AwardsView.swift */; };
+		C4D8BEBD25F076B7007198CE /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8BEBC25F076B7007198CE /* ExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		C491A0D925E6176D00A14038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C493EBC525B22C1F009D32AF /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		C493EBC825B22CBE009D32AF /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
+		C4D8BEBC25F076B7007198CE /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +272,7 @@
 				C491A0D925E6176D00A14038 /* Info.plist */,
 				C402F00025E75A25001451D0 /* AwardTests.swift */,
 				C402F00425EDDD4F001451D0 /* DevelopmentTests.swift */,
+				C4D8BEBC25F076B7007198CE /* ExtensionTests.swift */,
 			);
 			path = BrewBuddyTests;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				C402EFF925E74E65001451D0 /* AssetTests.swift in Sources */,
 				C402F00125E75A25001451D0 /* AwardTests.swift in Sources */,
 				C402EFFD25E756C3001451D0 /* PlaylistTests.swift in Sources */,
+				C4D8BEBD25F076B7007198CE /* ExtensionTests.swift in Sources */,
 				C491A0D825E6176D00A14038 /* BrewBuddyTests.swift in Sources */,
 				C402F00525EDDD4F001451D0 /* DevelopmentTests.swift in Sources */,
 			);

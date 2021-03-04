@@ -9,7 +9,6 @@ import CoreData
 import XCTest
 @testable import BrewBuddy
 
-
 class BaseTestCase: XCTestCase {
 
     var dataController: DataController!
