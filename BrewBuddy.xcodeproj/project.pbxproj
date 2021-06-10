@@ -41,11 +41,23 @@
 		C491A0D825E6176D00A14038 /* BrewBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C491A0D725E6176D00A14038 /* BrewBuddyTests.swift */; };
 		C493EBC625B22C1F009D32AF /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC525B22C1F009D32AF /* Award.swift */; };
 		C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC825B22CBE009D32AF /* AwardsView.swift */; };
+		C4C5098D26726A9800A42A62 /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = C4C5098C26726A9800A42A62 /* DecodableDictionary.json */; };
+		C4C5099326726AC900A42A62 /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = C4C5099226726AC900A42A62 /* DecodableString.json */; };
+		C4C509972672784500A42A62 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C509962672784500A42A62 /* PerformanceTests.swift */; };
+		C4C509A126727D8B00A42A62 /* BrewBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C509A026727D8B00A42A62 /* BrewBuddyUITests.swift */; };
+		C4C509AC2672BF4200A42A62 /* PlaylistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C509AB2672BF4200A42A62 /* PlaylistsViewModel.swift */; };
 		C4D8BEBD25F076B7007198CE /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8BEBC25F076B7007198CE /* ExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		C491A0DA25E6176D00A14038 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C44ACC70258E968000759BBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C44ACC77258E968000759BBB;
+			remoteInfo = BrewBuddy;
+		};
+		C4C509A326727D8B00A42A62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C44ACC70258E968000759BBB /* Project object */;
 			proxyType = 1;
@@ -97,6 +109,13 @@
 		C491A0D925E6176D00A14038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C493EBC525B22C1F009D32AF /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		C493EBC825B22CBE009D32AF /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
+		C4C5098C26726A9800A42A62 /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
+		C4C5099226726AC900A42A62 /* DecodableString.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableString.json; sourceTree = "<group>"; };
+		C4C509962672784500A42A62 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
+		C4C5099E26727D8B00A42A62 /* BrewBuddyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewBuddyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4C509A026727D8B00A42A62 /* BrewBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewBuddyUITests.swift; sourceTree = "<group>"; };
+		C4C509A226727D8B00A42A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4C509AB2672BF4200A42A62 /* PlaylistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsViewModel.swift; sourceTree = "<group>"; };
 		C4D8BEBC25F076B7007198CE /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +129,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C491A0D225E6176D00A14038 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4C5099B26727D8B00A42A62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -132,6 +158,7 @@
 			children = (
 				C44ACC7A258E968000759BBB /* BrewBuddy */,
 				C491A0D625E6176D00A14038 /* BrewBuddyTests */,
+				C4C5099F26727D8B00A42A62 /* BrewBuddyUITests */,
 				C44ACC79258E968000759BBB /* Products */,
 				C41BFC93259A80BB00D9D26C /* Frameworks */,
 			);
@@ -142,6 +169,7 @@
 			children = (
 				C44ACC78258E968000759BBB /* BrewBuddy.app */,
 				C491A0D525E6176D00A14038 /* BrewBuddyTests.xctest */,
+				C4C5099E26727D8B00A42A62 /* BrewBuddyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				C41BFCA4259BC1DA00D9D26C /* PlaylistsView.swift */,
+				C4C509AB2672BF4200A42A62 /* PlaylistsViewModel.swift */,
 				C43A7A8E25AD1FB1001218C3 /* SelectSomethingView.swift */,
 				C43D44BD25A67FEB00E8F75A /* PlaylistHeaderView.swift */,
 				C43D44C325A6AD3C00E8F75A /* EditPlaylistView.swift */,
@@ -266,6 +295,7 @@
 		C491A0D625E6176D00A14038 /* BrewBuddyTests */ = {
 			isa = PBXGroup;
 			children = (
+				C4C5098B26726A7600A42A62 /* Fixtures */,
 				C402EFFC25E756C3001451D0 /* PlaylistTests.swift */,
 				C491A0D725E6176D00A14038 /* BrewBuddyTests.swift */,
 				C402EFF825E74E65001451D0 /* AssetTests.swift */,
@@ -273,8 +303,27 @@
 				C402F00025E75A25001451D0 /* AwardTests.swift */,
 				C402F00425EDDD4F001451D0 /* DevelopmentTests.swift */,
 				C4D8BEBC25F076B7007198CE /* ExtensionTests.swift */,
+				C4C509962672784500A42A62 /* PerformanceTests.swift */,
 			);
 			path = BrewBuddyTests;
+			sourceTree = "<group>";
+		};
+		C4C5098B26726A7600A42A62 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				C4C5098C26726A9800A42A62 /* DecodableDictionary.json */,
+				C4C5099226726AC900A42A62 /* DecodableString.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		C4C5099F26727D8B00A42A62 /* BrewBuddyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C4C509A026727D8B00A42A62 /* BrewBuddyUITests.swift */,
+				C4C509A226727D8B00A42A62 /* Info.plist */,
+			);
+			path = BrewBuddyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +365,24 @@
 			productReference = C491A0D525E6176D00A14038 /* BrewBuddyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C4C5099D26727D8B00A42A62 /* BrewBuddyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4C509A526727D8B00A42A62 /* Build configuration list for PBXNativeTarget "BrewBuddyUITests" */;
+			buildPhases = (
+				C4C5099A26727D8B00A42A62 /* Sources */,
+				C4C5099B26727D8B00A42A62 /* Frameworks */,
+				C4C5099C26727D8B00A42A62 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4C509A426727D8B00A42A62 /* PBXTargetDependency */,
+			);
+			name = BrewBuddyUITests;
+			productName = BrewBuddyUITests;
+			productReference = C4C5099E26727D8B00A42A62 /* BrewBuddyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -329,6 +396,10 @@
 						CreatedOnToolsVersion = 12.3;
 					};
 					C491A0D425E6176D00A14038 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = C44ACC77258E968000759BBB;
+					};
+					C4C5099D26727D8B00A42A62 = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = C44ACC77258E968000759BBB;
 					};
@@ -350,6 +421,7 @@
 			targets = (
 				C44ACC77258E968000759BBB /* BrewBuddy */,
 				C491A0D425E6176D00A14038 /* BrewBuddyTests */,
+				C4C5099D26727D8B00A42A62 /* BrewBuddyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -369,6 +441,15 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C491A0D325E6176D00A14038 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4C5099326726AC900A42A62 /* DecodableString.json in Resources */,
+				C4C5098D26726A9800A42A62 /* DecodableDictionary.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4C5099C26727D8B00A42A62 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -407,6 +488,7 @@
 				C493EBC625B22C1F009D32AF /* Award.swift in Sources */,
 				C43D44B825A66EB900E8F75A /* BeerRowView.swift in Sources */,
 				C480AF1125BE400D00BB8EDC /* PlaylistSummaryView.swift in Sources */,
+				C4C509AC2672BF4200A42A62 /* PlaylistsViewModel.swift in Sources */,
 				C44ACC8D258E9E7700759BBB /* Main.xcdatamodeld in Sources */,
 				C43D44B225A56AD200E8F75A /* EditBeerView.swift in Sources */,
 				C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */,
@@ -432,12 +514,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C509972672784500A42A62 /* PerformanceTests.swift in Sources */,
 				C402EFF925E74E65001451D0 /* AssetTests.swift in Sources */,
 				C402F00125E75A25001451D0 /* AwardTests.swift in Sources */,
 				C402EFFD25E756C3001451D0 /* PlaylistTests.swift in Sources */,
 				C4D8BEBD25F076B7007198CE /* ExtensionTests.swift in Sources */,
 				C491A0D825E6176D00A14038 /* BrewBuddyTests.swift in Sources */,
 				C402F00525EDDD4F001451D0 /* DevelopmentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4C5099A26727D8B00A42A62 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4C509A126727D8B00A42A62 /* BrewBuddyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +539,11 @@
 			isa = PBXTargetDependency;
 			target = C44ACC77258E968000759BBB /* BrewBuddy */;
 			targetProxy = C491A0DA25E6176D00A14038 /* PBXContainerItemProxy */;
+		};
+		C4C509A426727D8B00A42A62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C44ACC77258E968000759BBB /* BrewBuddy */;
+			targetProxy = C4C509A326727D8B00A42A62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -689,6 +785,46 @@
 			};
 			name = Release;
 		};
+		C4C509A626727D8B00A42A62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QF8DE633U6;
+				INFOPLIST_FILE = BrewBuddyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.benbarkett.BrewBuddyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrewBuddy;
+			};
+			name = Debug;
+		};
+		C4C509A726727D8B00A42A62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QF8DE633U6;
+				INFOPLIST_FILE = BrewBuddyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.benbarkett.BrewBuddyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrewBuddy;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -715,6 +851,15 @@
 			buildConfigurations = (
 				C491A0DC25E6176D00A14038 /* Debug */,
 				C491A0DD25E6176D00A14038 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4C509A526727D8B00A42A62 /* Build configuration list for PBXNativeTarget "BrewBuddyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4C509A626727D8B00A42A62 /* Debug */,
+				C4C509A726727D8B00A42A62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

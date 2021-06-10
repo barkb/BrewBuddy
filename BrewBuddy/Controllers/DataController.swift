@@ -34,6 +34,13 @@ class DataController: ObservableObject {
             if let error = error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
             }
+
+            #if DEBUG
+            if CommandLine.arguments.contains("enable-testing") {
+                self.deleteAll()
+                UIView.setAnimationsEnabled(false)
+            }
+            #endif
         }
     }
 
@@ -89,7 +96,12 @@ class DataController: ObservableObject {
     /// shouldn't cause any problems because attributes are optional
     func save() {
         if container.viewContext.hasChanges {
-            try? container.viewContext.save()
+            do {
+                try container.viewContext.save()
+            } catch {
+                debugPrint(error)
+            }
+            debugPrint("Changes saved by  DataController")
         }
     }
 

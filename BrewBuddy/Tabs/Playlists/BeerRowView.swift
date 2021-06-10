@@ -40,7 +40,7 @@ struct BeerRowView: View {
         if beer.favorited {
             return Text("\(beer.beerName), favorited.")
         } else {
-            return Text("\(beer.beerName), rating: \(beer.rating).")
+            return Text("\(beer.beerName)")
         }
     }
 

@@ -26,7 +26,7 @@ struct PlaylistsView: View {
             sortDescriptors: [NSSortDescriptor(
                                 keyPath: \Playlist.creationDate,
                                 ascending: false)],
-            predicate: NSPredicate(format: "isActive = %d")
+            predicate: NSPredicate(format: "isActive = %d", showActivePlaylists)
         )
     }
 
@@ -124,9 +124,12 @@ struct PlaylistsView: View {
     func addPlaylist() {
         withAnimation {
             let playlist = Playlist(context: managedObjectContext)
+            debugPrint(playlist)
             playlist.isActive = true
             playlist.creationDate = Date()
+            debugPrint(playlist)
             dataController.save()
+            debugPrint(playlists.wrappedValue)
         }
     }
 
