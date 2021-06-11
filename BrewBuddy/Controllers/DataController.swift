@@ -96,12 +96,7 @@ class DataController: ObservableObject {
     /// shouldn't cause any problems because attributes are optional
     func save() {
         if container.viewContext.hasChanges {
-            do {
-                try container.viewContext.save()
-            } catch {
-                debugPrint(error)
-            }
-            debugPrint("Changes saved by  DataController")
+            try? container.viewContext.save()
         }
     }
 

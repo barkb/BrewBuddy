@@ -9,21 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     @SceneStorage("selectedView") var selectedView: String?
+    @EnvironmentObject var dataController: DataController
     var body: some View {
         TabView(selection: $selectedView) {
-            HomeView()
+            HomeView(dataController: dataController)
                 .tag(HomeView.tag)
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            PlaylistsView(showActivePlaylists: true)
+            PlaylistsView(dataController: dataController, showActivePlaylists: true)
                 .tag(PlaylistsView.openTag)
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Open")
                 }
-            PlaylistsView(showActivePlaylists: false)
+            PlaylistsView(dataController: dataController, showActivePlaylists: false)
                 .tag(PlaylistsView.closedTag)
                 .tabItem {
                     Image(systemName: "checkmark")

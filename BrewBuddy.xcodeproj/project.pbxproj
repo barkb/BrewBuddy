@@ -46,6 +46,7 @@
 		C4C509972672784500A42A62 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C509962672784500A42A62 /* PerformanceTests.swift */; };
 		C4C509A126727D8B00A42A62 /* BrewBuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C509A026727D8B00A42A62 /* BrewBuddyUITests.swift */; };
 		C4C509AC2672BF4200A42A62 /* PlaylistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C509AB2672BF4200A42A62 /* PlaylistsViewModel.swift */; };
+		C4C509B12672D6C400A42A62 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C509B02672D6C400A42A62 /* HomeViewModel.swift */; };
 		C4D8BEBD25F076B7007198CE /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8BEBC25F076B7007198CE /* ExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		C4C509A026727D8B00A42A62 /* BrewBuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewBuddyUITests.swift; sourceTree = "<group>"; };
 		C4C509A226727D8B00A42A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4C509AB2672BF4200A42A62 /* PlaylistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsViewModel.swift; sourceTree = "<group>"; };
+		C4C509B02672D6C400A42A62 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C4D8BEBC25F076B7007198CE /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				C41BFC97259A82EE00D9D26C /* HomeView.swift */,
+				C4C509B02672D6C400A42A62 /* HomeViewModel.swift */,
 				C480AF0D25BE3E7900BB8EDC /* ListView.swift */,
 				C480AF1025BE400D00BB8EDC /* PlaylistSummaryView.swift */,
 			);
@@ -503,6 +506,7 @@
 				C44ACC7E258E968000759BBB /* ContentView.swift in Sources */,
 				C43D44AB25A3B71400E8F75A /* Playlist-CoreDataHelpers.swift in Sources */,
 				C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */,
+				C4C509B12672D6C400A42A62 /* HomeViewModel.swift in Sources */,
 				C480AF0E25BE3E7900BB8EDC /* ListView.swift in Sources */,
 				C43A7A8F25AD1FB1001218C3 /* SelectSomethingView.swift in Sources */,
 				C41BFCA5259BC1DA00D9D26C /* PlaylistsView.swift in Sources */,

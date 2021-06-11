@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     let title: LocalizedStringKey
-    let beers: FetchedResults<Beer>.SubSequence
+    let beers: ArraySlice<Beer>
 
     var body: some View {
         if beers.isEmpty {
