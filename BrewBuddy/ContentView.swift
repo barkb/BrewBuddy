@@ -5,6 +5,7 @@
 //  Created by Ben Barkett on 12/19/20.
 //
 
+import CoreSpotlight
 import SwiftUI
 
 struct ContentView: View {
@@ -37,6 +38,11 @@ struct ContentView: View {
                     Text("Awards")
                 }
         }
+        .onContinueUserActivity(CSSearchableItemActionType, perform: moveToHome)
+    }
+
+    func moveToHome(_ input: Any) {
+        selectedView = HomeView.tag
     }
 }
 

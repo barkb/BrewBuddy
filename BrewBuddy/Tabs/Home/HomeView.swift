@@ -5,6 +5,7 @@
 //  Created by Ben Barkett on 12/28/20.
 //
 import CoreData
+import CoreSpotlight
 import SwiftUI
 
 struct HomeView: View {
@@ -24,6 +25,15 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ScrollView {
+                if let beer = viewModel.selectedBeer {
+                    NavigationLink(
+                        destination: EditBeerView(beer: beer),
+                        tag: beer,
+                        selection: $viewModel.selectedBeer,
+                        label: EmptyView.init
+                    )
+                    .id(beer)
+                }
                 VStack(alignment: .leading) {
                     ScrollView(.horizontal, showsIndicators: false) {
                         // This would be a spot to look into adding "categories" such as top
@@ -48,8 +58,15 @@ struct HomeView: View {
             .toolbar {
                 Button("Add Data", action: viewModel.addSampleData)
             }
+            .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
         } // NavigationView
     } // body
+
+    func loadSpotlightItem(_ userActivity: NSUserActivity) {
+        if let uniqueIdentifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+            viewModel.selectBeer(with: uniqueIdentifier)
+        }
+    }
 } // end View
 
 struct HomeView_Previews: PreviewProvider {

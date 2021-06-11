@@ -69,7 +69,7 @@ struct EditBeerView: View {
             }
         }
         .navigationTitle("Edit Beer")
-        .onDisappear(perform: dataController.save)
+        .onDisappear(perform: save)
     }
 
     func update() {
@@ -83,6 +83,10 @@ struct EditBeerView: View {
         beer.abv = Double(abv) ?? 0.0
         beer.ibu = Int16(ibu) ?? 0
         beer.favorited = favorited
+    }
+
+    func save() {
+        dataController.updateSpotlightAndSave(beer)
     }
 }
 

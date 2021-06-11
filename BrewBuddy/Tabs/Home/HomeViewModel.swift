@@ -15,6 +15,7 @@ extension HomeView {
 
         @Published var playlists = [Playlist]()
         @Published var beers = [Beer]()
+        @Published var selectedBeer: Beer?
 
         var dataController: DataController
 
@@ -89,6 +90,10 @@ extension HomeView {
         func addSampleData() {
             dataController.deleteAll()
             try? dataController.createSampleData()
+        }
+        
+        func selectBeer(with identifier: String) {
+            selectedBeer = dataController.beer(with: identifier)
         }
     }
 }

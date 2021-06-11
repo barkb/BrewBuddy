@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import CoreSpotlight
 import SwiftUI
 
 /// An environment singleton responsible for managing our Core Data stack, including
@@ -102,6 +103,13 @@ class DataController: ObservableObject {
 
     // Delete for deleting specific objects (beer or playlist) for testing
     func delete(_ object: NSManagedObject) {
+        let id = object.objectID.uriRepresentation().absoluteString
+        if object is Beer {
+            CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])
+        } else {
+            CSSearchableIndex.default().deleteSearchableItems(withDomainIdentifiers: [id])
+        }
+
         container.viewContext.delete(object)
     }
 
@@ -138,5 +146,37 @@ class DataController: ObservableObject {
             // fatalError("Unknown award criterion: \(award.criterion)")
             return false
         }
+    }
+
+    func updateSpotlightAndSave(_ beer: Beer) {
+        let beerID = beer.objectID.uriRepresentation().absoluteString
+        let playlistID = beer.playlist?.objectID.uriRepresentation().absoluteString
+
+        let attributeSet = CSSearchableItemAttributeSet(contentType: .text)
+        attributeSet.title = beer.beerName
+        attributeSet.contentDescription =
+            "\(beer.playlist?.playlistTitle ?? "") - \(beer.beerBrewery) - \(beer.beerType)\n\(beer.beerDetail)"
+
+        let searchableBeer = CSSearchableItem(
+            uniqueIdentifier: beerID,
+            domainIdentifier: playlistID,
+            attributeSet: attributeSet
+        )
+
+        CSSearchableIndex.default().indexSearchableItems([searchableBeer])
+
+        save()
+    }
+
+    func beer(with uniqeIdentifier: String) -> Beer? {
+        guard let url = URL(string: uniqeIdentifier) else {
+            return nil
+        }
+        // swiftlint:disable:next identifier_name
+        guard let id = container.persistentStoreCoordinator.managedObjectID(forURIRepresentation: url) else {
+            return nil
+        }
+
+        return try? container.viewContext.existingObject(with: id) as? Beer
     }
 }
