@@ -103,6 +103,7 @@ class DataController: ObservableObject {
 
     // Delete for deleting specific objects (beer or playlist) for testing
     func delete(_ object: NSManagedObject) {
+        // swiftlint:disable:next identifier_name
         let id = object.objectID.uriRepresentation().absoluteString
         if object is Beer {
             CSSearchableIndex.default().deleteSearchableItems(withIdentifiers: [id])

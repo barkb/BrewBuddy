@@ -38,6 +38,7 @@ struct ContentView: View {
                     Text("Awards")
                 }
         }
+        .accentColor(Color("AccentColor"))
         .onContinueUserActivity(CSSearchableItemActionType, perform: moveToHome)
     }
 

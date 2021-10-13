@@ -36,6 +36,7 @@ struct PlaylistsView: View {
                             }
                         } label: {
                             Label("Add New Beer", systemImage: "plus")
+                                .foregroundColor(Color(playlist.playlistColor))
                         } // Button
                     } // showActivePlaylists If
                 } // Section

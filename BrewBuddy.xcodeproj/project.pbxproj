@@ -12,6 +12,7 @@
 		C402F00125E75A25001451D0 /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402F00025E75A25001451D0 /* AwardTests.swift */; };
 		C402F00525EDDD4F001451D0 /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402F00425EDDD4F001451D0 /* DevelopmentTests.swift */; };
 		C404DF3C25B244560071BF94 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404DF3B25B244560071BF94 /* Color-Additions.swift */; };
+		C40C04B6267406BB008B8BD7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C04B5267406BB008B8BD7 /* SettingsView.swift */; };
 		C41BFC8F259A711400D9D26C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC8E259A711400D9D26C /* DataController.swift */; };
 		C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC97259A82EE00D9D26C /* HomeView.swift */; };
 		C41BFCA5259BC1DA00D9D26C /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFCA4259BC1DA00D9D26C /* PlaylistsView.swift */; };
@@ -73,6 +74,7 @@
 		C402F00025E75A25001451D0 /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
 		C402F00425EDDD4F001451D0 /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
 		C404DF3B25B244560071BF94 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
+		C40C04B5267406BB008B8BD7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		C41BFC8E259A711400D9D26C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrewBuddy.entitlements; sourceTree = "<group>"; };
 		C41BFC94259A80BB00D9D26C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -147,6 +149,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40C04B426740688008B8BD7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C40C04B5267406BB008B8BD7 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		C41BFC93259A80BB00D9D26C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 		C462498325DEF2A000C2A102 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				C40C04B426740688008B8BD7 /* Settings */,
 				C462498425DEF2B000C2A102 /* Home */,
 				C462498525DEF2B500C2A102 /* Playlists */,
 				C462498625DEF2BC00C2A102 /* Awards */,
@@ -502,6 +513,7 @@
 				C43A7A8C25ABC474001218C3 /* Sequence-Sorting.swift in Sources */,
 				C43D44B525A5700C00E8F75A /* RatingView.swift in Sources */,
 				C43D44BE25A67FEB00E8F75A /* PlaylistHeaderView.swift in Sources */,
+				C40C04B6267406BB008B8BD7 /* SettingsView.swift in Sources */,
 				C41BFC8F259A711400D9D26C /* DataController.swift in Sources */,
 				C44ACC7E258E968000759BBB /* ContentView.swift in Sources */,
 				C43D44AB25A3B71400E8F75A /* Playlist-CoreDataHelpers.swift in Sources */,
