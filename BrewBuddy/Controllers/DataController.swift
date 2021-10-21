@@ -180,4 +180,11 @@ class DataController: ObservableObject {
 
         return try? container.viewContext.existingObject(with: id) as? Beer
     }
+
+    func addPlaylist() {
+        let playlist = Playlist(context: container.viewContext)
+        playlist.isActive = true
+        playlist.creationDate = Date()
+        save()
+    }
 }

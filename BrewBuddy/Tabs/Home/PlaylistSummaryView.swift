@@ -20,7 +20,7 @@ struct PlaylistSummaryView: View {
         .padding()
         .background(Color.secondarySystemGroupedBackground)
         .cornerRadius(10)
-        .shadow(color: Color.black.opacity(0.2), radius: 5)
+        .shadow(color: Color.black.opacity(0.2), radius: 2)
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(playlist.label)
     }

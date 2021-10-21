@@ -11,6 +11,9 @@ import SwiftUI
 struct ContentView: View {
     @SceneStorage("selectedView") var selectedView: String?
     @EnvironmentObject var dataController: DataController
+
+    private let newPlaylistActivity = "com.barkett.BrewBuddy.newPlaylist"
+
     var body: some View {
         TabView(selection: $selectedView) {
             HomeView(dataController: dataController)
@@ -40,10 +43,26 @@ struct ContentView: View {
         }
         .accentColor(Color("AccentColor"))
         .onContinueUserActivity(CSSearchableItemActionType, perform: moveToHome)
+        .onContinueUserActivity(newPlaylistActivity, perform: createPlaylist)
+        .userActivity(newPlaylistActivity) { activity in
+            activity.title = "New Playlist"
+            activity.isEligibleForPrediction = true
+        }
+        .onOpenURL(perform: openURL)
     }
 
     func moveToHome(_ input: Any) {
         selectedView = HomeView.tag
+    }
+
+    func openURL(_ url: URL) {
+        selectedView = PlaylistsView.openTag
+        dataController.addPlaylist()
+    }
+
+    func createPlaylist(_ userActivity: NSUserActivity) {
+        selectedView = PlaylistsView.openTag
+        dataController.addPlaylist()
     }
 }
 

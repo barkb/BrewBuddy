@@ -53,10 +53,7 @@ extension PlaylistsView {
         }
 
         func addPlaylist() {
-            let playlist = Playlist(context: dataController.container.viewContext)
-            playlist.isActive = true
-            playlist.creationDate = Date()
-            dataController.save()
+            dataController.addPlaylist()
         }
 
         func delete(_ offsets: IndexSet, from playlist: Playlist) {

@@ -16,6 +16,8 @@
 		C41BFC8F259A711400D9D26C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC8E259A711400D9D26C /* DataController.swift */; };
 		C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC97259A82EE00D9D26C /* HomeView.swift */; };
 		C41BFCA5259BC1DA00D9D26C /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFCA4259BC1DA00D9D26C /* PlaylistsView.swift */; };
+		C42DFEFA2721088E00FC5290 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DFEF92721088E00FC5290 /* AppDelegate.swift */; };
+		C42DFEFC272108A000FC5290 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DFEFB272108A000FC5290 /* SceneDelegate.swift */; };
 		C43A7A8C25ABC474001218C3 /* Sequence-Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A7A8B25ABC474001218C3 /* Sequence-Sorting.swift */; };
 		C43A7A8F25AD1FB1001218C3 /* SelectSomethingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A7A8E25AD1FB1001218C3 /* SelectSomethingView.swift */; };
 		C43A7A9225AD2849001218C3 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A7A9125AD2849001218C3 /* Bundle-Decodable.swift */; };
@@ -80,6 +82,8 @@
 		C41BFC94259A80BB00D9D26C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		C41BFC97259A82EE00D9D26C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C41BFCA4259BC1DA00D9D26C /* PlaylistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsView.swift; sourceTree = "<group>"; };
+		C42DFEF92721088E00FC5290 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C42DFEFB272108A000FC5290 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C43A7A8B25ABC474001218C3 /* Sequence-Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence-Sorting.swift"; sourceTree = "<group>"; };
 		C43A7A8E25AD1FB1001218C3 /* SelectSomethingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSomethingView.swift; sourceTree = "<group>"; };
 		C43A7A9125AD2849001218C3 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 			children = (
 				C462498325DEF2A000C2A102 /* Tabs */,
 				C44ACC7B258E968000759BBB /* BrewBuddyApp.swift */,
+				C42DFEF92721088E00FC5290 /* AppDelegate.swift */,
+				C42DFEFB272108A000FC5290 /* SceneDelegate.swift */,
 				C44ACC7D258E968000759BBB /* ContentView.swift */,
 				C462497B25DEEFCA00C2A102 /* Controllers */,
 				C462497C25DEEFFF00C2A102 /* Extensions */,
@@ -506,8 +512,10 @@
 				C44ACC8D258E9E7700759BBB /* Main.xcdatamodeld in Sources */,
 				C43D44B225A56AD200E8F75A /* EditBeerView.swift in Sources */,
 				C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */,
+				C42DFEFA2721088E00FC5290 /* AppDelegate.swift in Sources */,
 				C43D44A825A3B55100E8F75A /* Beer-CoreDataHelpers.swift in Sources */,
 				C404DF3C25B244560071BF94 /* Color-Additions.swift in Sources */,
+				C42DFEFC272108A000FC5290 /* SceneDelegate.swift in Sources */,
 				C43D44BB25A676C000E8F75A /* Binding-OnChange.swift in Sources */,
 				C43A7A9225AD2849001218C3 /* Bundle-Decodable.swift in Sources */,
 				C43A7A8C25ABC474001218C3 /* Sequence-Sorting.swift in Sources */,
