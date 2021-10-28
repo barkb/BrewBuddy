@@ -17,6 +17,11 @@ struct HomeView: View {
         [GridItem(.fixed(100))]
     }
 
+    var topRatedColumns: [GridItem] {
+        [GridItem(.flexible(minimum: 20), spacing: 5, alignment: .center),
+         GridItem(.flexible(minimum: 20), spacing: 5, alignment: .center)]
+    }
+
     init(dataController: DataController) {
         let viewModel = ViewModel(dataController: dataController)
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -46,11 +51,17 @@ struct HomeView: View {
                         .padding([.horizontal, .top])
                         .fixedSize(horizontal: false, vertical: true)
                     } // Inner ScrollView
-                    VStack(alignment: .leading) {
-                        ListView(title: "Top Rated", beers: viewModel.topRated)
-                        ListView(title: "More to Explore", beers: viewModel.moreToExplore)
-                    } // Middle VStack
+                    LazyVGrid(columns: topRatedColumns) {
+                        ForEach(viewModel.topRated) { beer in
+                            TopRatedGridCardView(beer: beer)
+                        }
+                    }
                     .padding(.horizontal)
+//                    VStack(alignment: .leading) {
+//                        ListView(title: "Top Rated", beers: viewModel.topRated)
+//                        ListView(title: "More to Explore", beers: viewModel.moreToExplore)
+//                    } // Middle VStack
+//                    .padding(.horizontal)
                 } // Topmost VStack
             } // Topmost ScrollView
             .background(Color.systemGroupedBackground.ignoresSafeArea())

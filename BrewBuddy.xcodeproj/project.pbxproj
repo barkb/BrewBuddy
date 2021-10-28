@@ -13,6 +13,7 @@
 		C402F00525EDDD4F001451D0 /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C402F00425EDDD4F001451D0 /* DevelopmentTests.swift */; };
 		C404DF3C25B244560071BF94 /* Color-Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C404DF3B25B244560071BF94 /* Color-Additions.swift */; };
 		C40C04B6267406BB008B8BD7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C04B5267406BB008B8BD7 /* SettingsView.swift */; };
+		C414AF3E2728E43E00682BC3 /* TopRatedGridCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414AF3D2728E43E00682BC3 /* TopRatedGridCardView.swift */; };
 		C41BFC8F259A711400D9D26C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC8E259A711400D9D26C /* DataController.swift */; };
 		C41BFC98259A82EE00D9D26C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFC97259A82EE00D9D26C /* HomeView.swift */; };
 		C41BFCA5259BC1DA00D9D26C /* PlaylistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41BFCA4259BC1DA00D9D26C /* PlaylistsView.swift */; };
@@ -44,6 +45,7 @@
 		C491A0D825E6176D00A14038 /* BrewBuddyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C491A0D725E6176D00A14038 /* BrewBuddyTests.swift */; };
 		C493EBC625B22C1F009D32AF /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC525B22C1F009D32AF /* Award.swift */; };
 		C493EBC925B22CBE009D32AF /* AwardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C493EBC825B22CBE009D32AF /* AwardsView.swift */; };
+		C4BCB533272A438A002734C1 /* CardRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BCB532272A438A002734C1 /* CardRatingView.swift */; };
 		C4C5098D26726A9800A42A62 /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = C4C5098C26726A9800A42A62 /* DecodableDictionary.json */; };
 		C4C5099326726AC900A42A62 /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = C4C5099226726AC900A42A62 /* DecodableString.json */; };
 		C4C509972672784500A42A62 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C509962672784500A42A62 /* PerformanceTests.swift */; };
@@ -77,6 +79,7 @@
 		C402F00425EDDD4F001451D0 /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
 		C404DF3B25B244560071BF94 /* Color-Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Additions.swift"; sourceTree = "<group>"; };
 		C40C04B5267406BB008B8BD7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C414AF3D2728E43E00682BC3 /* TopRatedGridCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedGridCardView.swift; sourceTree = "<group>"; };
 		C41BFC8E259A711400D9D26C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		C41BFC91259A800300D9D26C /* BrewBuddy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BrewBuddy.entitlements; sourceTree = "<group>"; };
 		C41BFC94259A80BB00D9D26C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -116,6 +119,7 @@
 		C491A0D925E6176D00A14038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C493EBC525B22C1F009D32AF /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		C493EBC825B22CBE009D32AF /* AwardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsView.swift; sourceTree = "<group>"; };
+		C4BCB532272A438A002734C1 /* CardRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRatingView.swift; sourceTree = "<group>"; };
 		C4C5098C26726A9800A42A62 /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
 		C4C5099226726AC900A42A62 /* DecodableString.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableString.json; sourceTree = "<group>"; };
 		C4C509962672784500A42A62 /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
@@ -283,6 +287,8 @@
 				C4C509B02672D6C400A42A62 /* HomeViewModel.swift */,
 				C480AF0D25BE3E7900BB8EDC /* ListView.swift */,
 				C480AF1025BE400D00BB8EDC /* PlaylistSummaryView.swift */,
+				C414AF3D2728E43E00682BC3 /* TopRatedGridCardView.swift */,
+				C4BCB532272A438A002734C1 /* CardRatingView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 				C42DFEFC272108A000FC5290 /* SceneDelegate.swift in Sources */,
 				C43D44BB25A676C000E8F75A /* Binding-OnChange.swift in Sources */,
 				C43A7A9225AD2849001218C3 /* Bundle-Decodable.swift in Sources */,
+				C4BCB533272A438A002734C1 /* CardRatingView.swift in Sources */,
 				C43A7A8C25ABC474001218C3 /* Sequence-Sorting.swift in Sources */,
 				C43D44B525A5700C00E8F75A /* RatingView.swift in Sources */,
 				C43D44BE25A67FEB00E8F75A /* PlaylistHeaderView.swift in Sources */,
@@ -531,6 +538,7 @@
 				C43A7A8F25AD1FB1001218C3 /* SelectSomethingView.swift in Sources */,
 				C41BFCA5259BC1DA00D9D26C /* PlaylistsView.swift in Sources */,
 				C44ACC7C258E968000759BBB /* BrewBuddyApp.swift in Sources */,
+				C414AF3E2728E43E00682BC3 /* TopRatedGridCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

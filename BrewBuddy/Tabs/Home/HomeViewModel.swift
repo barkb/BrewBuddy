@@ -20,7 +20,7 @@ extension HomeView {
         var dataController: DataController
 
         var topRated: ArraySlice<Beer> {
-            beers.prefix(3)
+            beers.prefix(10)
         }
 
         var moreToExplore: ArraySlice<Beer> {
